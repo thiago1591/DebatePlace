@@ -27,6 +27,20 @@ export default function BottomTab() {
       }
     })}
     tabBarOptions={{activeTintColor:'#9387DF',
+    activeBackgroundColor: '#F1F1F1',
+    inactiveBackgroundColor: '#F1F1F1',
+    barStyle: {
+      borderWidth: 0.5,
+      borderTopColor: '#000',
+      shadowColor: "#000000",
+      shadowOpacity: 1,
+      shadowRadius: 30,
+      shadowOffset: {
+          height: 10,
+          width: 10
+      },
+      elevation: 5
+  },
     inactiveTintColor:'gray',labelStyle:{fontSize:14},
     labelStyle:{
       margin:2
