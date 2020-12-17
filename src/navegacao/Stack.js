@@ -8,6 +8,7 @@ import Cadastro2 from '../views/cadastro/Cadastro2'
 import Cadastro3 from '../views/cadastro/Cadastro3'
 import BTab  from './BottomTab'
 
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Stack = createStackNavigator()

@@ -5,7 +5,7 @@ import DebatesPrivados from '../views/app/DebatesPrivados'
 import DebatesPublicos from '../views/app/DebatesPublicos'
 const Tab = createBottomTabNavigator();
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import Header from './HeaderTab'
 
 export default function BottomTab() {
   return (
@@ -14,7 +14,7 @@ export default function BottomTab() {
     screenOptions={({route}) => ({
       tabBarIcon: ({color,size}) => {
         let iconName
-        if(route.name === 'Home') {
+        if(route.name === 'Header') {
           iconName = 'home'
         }
         else if(route.name === 'DebatesPrivados') {
@@ -47,7 +47,7 @@ export default function BottomTab() {
     }
     }}>
       <Tab.Screen name="DebatesPublicos" component={DebatesPublicos} />
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Header" component={Header} />
       <Tab.Screen name="DebatesPrivados" component={DebatesPrivados} />
     </Tab.Navigator>
   );

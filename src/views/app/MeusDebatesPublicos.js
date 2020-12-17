@@ -10,7 +10,7 @@ export default props => {
 
         <View style={{ marginTop: '15%' }}>
             <Text style={styles.bold}>Sua frase do dia:</Text>
-            <Text>“Experiência é o nome que cada um dá a seus erros!” </Text>
+            <Text>“Debates Publicos” </Text>
             <Text>– Oscar Wilde.</Text>
         </View>
 
