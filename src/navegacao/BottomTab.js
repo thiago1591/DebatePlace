@@ -7,6 +7,7 @@ const Tab = createBottomTabNavigator();
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from './HeaderTab'
 
+
 export default function BottomTab() {
   return (
     <Tab.Navigator 
