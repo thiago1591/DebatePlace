@@ -6,6 +6,7 @@ import DebatesPublicos from '../views/app/DebatesPublicos'
 const Tab = createBottomTabNavigator();
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from './HeaderTab'
+import { Title } from 'react-native-paper';
 
 
 export default function BottomTab() {
@@ -48,7 +49,7 @@ export default function BottomTab() {
     }
     }}>
       <Tab.Screen name="DebatesPublicos" component={DebatesPublicos} />
-      <Tab.Screen name="Header" component={Header} />
+      <Tab.Screen options={{title:"Home"}} name="Header" component={Header} />
       <Tab.Screen name="DebatesPrivados" component={DebatesPrivados} />
     </Tab.Navigator>
   );

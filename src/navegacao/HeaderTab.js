@@ -1,9 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
 import { View, Button } from 'react-native'
-import Welcome from '../views/Welcome'
-import MeusDebatesPublicos from '../views/app/MeusDebatesPublicos'
-import MeusDebatesPrivados from '../views/app/MeusDebatesPrivados'
+import TopNavigation from '../navegacao/TopNavigation'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import UserAvatar from "@muhzi/react-native-user-avatar";
 
@@ -11,10 +9,12 @@ const Stack = createStackNavigator()
 
 export default props => {
     return <Stack.Navigator
-        initialRouteName="MeusDebatesPublicos"
+        initialRouteName="TopNavigation"
         screenOptions={{
             headerStyle: {
                 backgroundColor: '#6B84C5',
+                shadowOpacity:0,
+                elevation:0
             },
             headerTitleStyle: {
                 fontSize: 15
@@ -36,8 +36,7 @@ export default props => {
             ),
             headerLeft: () => { return null }
         }}
-            name="MeusDebatesPublicos"
-            component={MeusDebatesPublicos} />
-        <Stack.Screen options={{ headerLeft: () => { return null } }} name="MeusDebatesPrivados" component={MeusDebatesPrivados} />
+            name="TopNavigation"
+            component={TopNavigation} />
     </Stack.Navigator>;
 }

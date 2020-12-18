@@ -4,21 +4,7 @@ import Botao from '../../components/Botao'
 
 export default props => {
     return <View style={styles.container}>
-        <View style={styles.header}>
-            <Text style={styles.texto}>Bom dia, Thiago!</Text>
-        </View>
-
-        <View style={{ marginTop: '15%' }}>
-            <Text style={styles.bold}>Sua frase do dia:</Text>
-            <Text>“Debates Publicos” </Text>
-            <Text>– Oscar Wilde.</Text>
-        </View>
-
-    
-        
-        <View>
-            <Botao nome="teste" avancar="Header" />
-        </View>
+       
         
 
     </View>;
