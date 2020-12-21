@@ -1,30 +1,38 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import UserAvatar from "@muhzi/react-native-user-avatar";
+import { Card} from 'react-native-paper';
+
 
 export default props => {
     let menssagem = "Menssagem de teste opa opa opa"
     return (
-        <View style={styles.container}>
+        <>
+        <Text style={{fontSize:16, fontWeight:'bold'}}>Legalização da Maconha</Text>
+            {/* <Text>Legalização da Maconha</Text> */}
+            <View style={styles.container}>
             <View style={styles.containerLeft}>
                 <UserAvatar
-
                     userName="John Samuel"
                     size={50}
                     backgroundColor="#0be881"
                     src="https://images.pexels.com/photos/4403924/pexels-photo-4403924.jpeg"
                 />
                 <View style={styles.midContainer}>
+                
                     <Text style={styles.username}>Thiago</Text>
                     <Text style={styles.lastMessage} numberOfLines={1}>
                         {menssagem.length < 35
                             ? `${menssagem}`
                             : `${menssagem.substring(0, 32)}...`}
                     </Text>
-                </View>
+                    
+                </View>        
+                <Text style={styles.time}>Ontem</Text>
             </View>
-            <Text style={styles.time}>Ontem</Text>
+            
         </View>
+        </>
     )
 }
 
@@ -37,13 +45,16 @@ const styles = StyleSheet.create({
     },
     containerLeft: {
         flexDirection: 'row',
+        borderBottomWidth:0.3,
+        borderBottomColor:'#E4CCCC',
+        paddingBottom:15,
+        flex:1
     },
     midContainer: {
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         marginLeft: 10
     },
     username: {
-        fontWeight: 'bold',
         fontSize: 16
     },
     lastMessage: {
@@ -51,7 +62,9 @@ const styles = StyleSheet.create({
         color: 'gray',
     },
     time: {
-        fontSize: 14,
-        color: 'gray'
+        fontSize: 13,
+        color: 'gray',
+        textAlign: 'right',
+        flex:1,
     }
 })
