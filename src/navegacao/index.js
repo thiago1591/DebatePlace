@@ -6,7 +6,7 @@ import Tab from './BottomTab'
 export default props => {
   return <SafeAreaView style={{flex: 1}}>
         <NavigationContainer>
-            <Stack />
+            <Tab />
         </NavigationContainer>
        </SafeAreaView>;
 }

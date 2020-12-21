@@ -18,10 +18,10 @@ export default props => {
         }}
         initialRouteName="MeusDebatesPublicos">
         <Tab.Screen
-            name="Meus Debates Publicos"
+            name="Públicos"
             component={MeusDebatesPublicos} />
         <Tab.Screen
-            name="Meus Debates Privados"
+            name="Privados"
             component={MeusDebatesPrivados} />
     </Tab.Navigator>;
 }

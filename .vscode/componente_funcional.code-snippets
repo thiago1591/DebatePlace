@@ -1,0 +1,19 @@
+{
+	 
+	 "Componente Funcional": {
+	 	"scope": "javascript",
+	 	"prefix": "snp",
+	 	"body":[
+			"import React from 'react';",
+			"import { View,Text } from 'react-native';",
+			"",
+			"",
+			"export default props => {",
+			"  return <View> </View>;",
+			"}",
+			"",
+			
+		  ],
+	 	"description": "Log output to console"
+	 }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet,FlatList } from 'react-native';
 import Botao from '../../components/Botao'
-import ChatListItem from '../../components/ComponenteDebatesPrivados'
+import ChatListItem from '../../components/ComponenteMeusDebatesPrivados'
 
 
 export default props => {

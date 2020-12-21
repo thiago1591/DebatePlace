@@ -21,7 +21,7 @@ export default props => {
             }
         }}>
         <Stack.Screen options={{
-            title: "DEBATE PLACE",
+            title: "MEUS DEBATES",
             headerTitleStyle: { color: "white" },
             headerRight: () => (
                 <View style={{ paddingRight: 10,flexDirection:'row' }}>

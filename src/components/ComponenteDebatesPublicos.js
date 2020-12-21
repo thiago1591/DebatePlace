@@ -1,93 +1,75 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import UserAvatar from "@muhzi/react-native-user-avatar";
+import LinhaRespostas from './LinhaRespostas'
 import { Card} from 'react-native-paper';
 
-
 export default props => {
-    let menssagem = "postado dia 27 de novembro"
-    let menssagem2 = "respondido dia 27 de novembro"
-    return (
-        <Card style={{padding:5,marginBottom:10}}>
-            <View style={styles.container}>
-            <View style={styles.containerLeft}>
-                <UserAvatar
-                    userName="John Samuel"
-                    size={50}
-                    backgroundColor="#0be881"
-                    src="https://s.france24.com/media/display/b92cfa72-e8c3-11ea-bcb5-005056bff430/w:1280/p:16x9/2020-08-27T181728Z_711309918_RC2IMI9O4SSL_RTRMADP_3_USA-ELECTION-BIDEN.webp"
-                />
-                <View style={styles.midContainer}>
-                
-                    <Text style={styles.username}>Biden</Text>
-                    <Text style={styles.lastMessage} numberOfLines={1}>
-                        {menssagem.length < 35
-                            ? `${menssagem}`
-                            : `${menssagem.substring(0, 32)}...`}
-                    </Text>
-                    
-                </View>         
-            </View>
-            <Text style={styles.time}>Ontem</Text>
+    return <Card style={styles.container}>
+
+        <View style={styles.autorDebate}>
+            <UserAvatar
+                size={30}
+                backgroundColor="#0be881"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg"
+            />
+            <Text style={{ marginLeft: 10, alignSelf: 'center' }}>Aristóteles Gomes</Text>
         </View>
-        <Text style={{fontSize:17, fontWeight:'bold'}}>Sai daqui bixo</Text>
-        <Text style={{fontSize:16,paddingBottom:10}}>Bora já perdeu, passa a casa branca ae e deixa eu assumir logo Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</Text>
-        <View style={styles.containerResposta}>
-        <UserAvatar
-                    userName="John Samuel"
-                    size={50}
-                    backgroundColor="#0be881"
-                    src="https://s2.glbimg.com/__7L0WZ-LG6nWLNrz2Xz-ZcQsuA=/0x0:1700x1065/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/f/H/kaTJBASmiOPBoBnX2m8w/ap20331846075368.jpg"
-                />
-                <View style={styles.midContainer}>
-                
-                    <Text style={styles.username}>Trump</Text>
-                    <Text style={styles.lastMessage} numberOfLines={1}>
-                        {menssagem2.length < 35
-                            ? `${menssagem2}`
-                            : `${menssagem2.substring(0, 32)}...`}
-                    </Text>
-                    
-                </View>         
-            <Text style={styles.time}>Ontem</Text>
+
+            <Text style={styles.titulo}>Liberalismo é realmente o único sistema bom?</Text>
+            <Text style={styles.menssagemInicial}>Envolvidos tambem pelo contexto Humanista Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</Text>
+
+         <LinhaRespostas />
+
+         <View style={styles.autorDebate}>
+            <UserAvatar
+                size={30}
+                backgroundColor="#0be881"
+                src="https://d1nhio0ox7pgb.cloudfront.net/_img/i_collection_png/256x256/plain/dude3.png"
+            />
+            <Text style={{ marginLeft: 10, alignSelf: 'center' }}>Aristóteles Gomes</Text>
         </View>
-        <Text>Só saio daqui arrastado krai Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</Text>
-        </Card>
-    )
+        <Text style={styles.menssagemInicial}>Envolvidos tambem pelo contexto Humanista Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</Text>
+
+
+        <View style={{ justifyContent: 'center', flexDirection: 'row' }}>
+            <View style={styles.circulo}></View>
+            <View style={styles.circulo}></View>
+            <View style={styles.circulo}></View>
+        </View>
+
+        <Text style={styles.juntar}>GOSTARIA DE SE JUNTAR A ESSE DEBATE?</Text>
+    </Card>;
 }
 
 const styles = StyleSheet.create({
     container: {
+        padding: 10,
+        marginBottom:10
+    },
+    autorDebate: {
+        flexDirection: 'row',
+    },
+    titulo: {
         marginVertical: 10,
-        flexDirection: 'row',
-        width: '100%',
-        justifyContent: 'space-between',
+        textAlign: 'center',
+        fontSize: 18
     },
-    containerLeft: {
-        flexDirection: 'row',
-    },
-    midContainer: {
-        justifyContent: 'space-around',
-        marginLeft: 10
-    },
-    containerResposta:{
-        borderTopWidth:0.3,
-        borderTopColor:'#E4CCCC',
-        flexDirection: 'row',
-        paddingTop:10,
-        paddingBottom:2
-    },
-    username: {
-        fontSize: 16
-    },
-    lastMessage: {
+    menssagemInicial: {
         fontSize: 14,
         color: 'gray',
+        marginBottom:5
     },
-    time: {
-        fontSize: 13,
-        color: 'gray',
-        textAlign: 'right',
-        flex:1,
+    circulo: {
+        borderRadius: 5,
+        width: 6,
+        height: 6,
+        backgroundColor: 'black',
+        marginRight: 3
+    },
+    juntar: {
+        textAlign: 'center',
+        fontSize: 16,
+        marginTop: 15
     }
 })
