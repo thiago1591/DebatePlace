@@ -10,7 +10,7 @@ import Header from './HeaderTab'
 export default function BottomTab() {
   return (
     <Tab.Navigator 
-    initialRouteName="DebatesPublicos"
+    initialRouteName="DebatesPrivados"
     screenOptions={({route}) => ({
       tabBarIcon: ({color,size}) => {
         let iconName
