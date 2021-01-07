@@ -6,16 +6,23 @@ import Login from '../views/Login'
 import Cadastro1 from '../views/cadastro/Cadastro1'
 import Cadastro2 from '../views/cadastro/Cadastro2'
 import Cadastro3 from '../views/cadastro/Cadastro3'
+import MeuPerfil from '../views/app/MeuPerfil'
 import BTab  from './BottomTab'
 
-
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 const Stack = createStackNavigator()
-const Tab = createBottomTabNavigator();
+
+const DebatePublicoStack = createStackNavigator();
+function AppStack() {
+  return (
+    <DebatePublicoStack.Navigator initialRouteName="MeuPerfil">
+      <DebatePublicoStack.Screen name="DebatesPublicos" component={BTab} options={{headerShown:false}}/>
+      <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
+    </DebatePublicoStack.Navigator>
+  );
+}
 
 export default props => {
-  return <Stack.Navigator initialRouteName="Cadastro3"
+  return <Stack.Navigator initialRouteName="AppStack"
         screenOptions={{headerShown: false}}>
         <Stack.Screen  name ="Welcome" component={Welcome} />
         <Stack.Screen  name ="Avisos" component={Avisos} />
@@ -23,6 +30,6 @@ export default props => {
         <Stack.Screen  name ="Cadastro1" component={Cadastro1} />
         <Stack.Screen  name ="Cadastro2" component={Cadastro2} />
         <Stack.Screen  name ="Cadastro3" component={Cadastro3} />
-        <Stack.Screen  name ="BTab" component={BTab} />
+        <Stack.Screen  name ="AppStack" component={AppStack} />
        </Stack.Navigator>;
 }

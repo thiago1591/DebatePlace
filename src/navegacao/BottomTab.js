@@ -5,6 +5,19 @@ import DebatesPublicos from '../views/app/DebatesPublicos'
 const Tab = createBottomTabNavigator();
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from './HeaderTab'
+import MeuPerfil from '../views/app/MeuPerfil'
+import { createStackNavigator } from '@react-navigation/stack';
+
+const DebatePublicoStack = createStackNavigator();
+
+function DebatesPublicosStack() {
+  return (
+    <DebatePublicoStack.Navigator>
+      <DebatePublicoStack.Screen name="DebatesPublicos" component={DebatesPublicos} options={{headerShown:false}}/>
+      <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} />
+    </DebatePublicoStack.Navigator>
+  );
+}
 
 
 export default function BottomTab() {

@@ -1,0 +1,97 @@
+import React from 'react';
+import { View, Text } from 'react-native';
+import UserAvatar from "@muhzi/react-native-user-avatar";
+import { Dimensions, ImageBackground, ScrollView, StyleSheet,Image,TouchableOpacity } from 'react-native';
+import { Card } from 'react-native-paper';
+import { Button } from 'react-native-elements';
+
+
+const capaHeight = 30 * Dimensions.get('window').height / 100
+
+export default props => {
+  return <ScrollView style={styles.containerScroll}>
+    <ImageBackground
+      source={require('../../../assets/math.jpg')}
+      style={styles.capa}>
+      <View style={styles.avatar}>
+        <UserAvatar
+          size={120}
+          backgroundColor="#0be881"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg"
+        />
+        <Text style={styles.txtNome}>Thiago André</Text>
+      </View>
+
+    </ImageBackground>
+
+    <View style={styles.containerConteudo}>
+      <Text style={styles.txtTopics}>Sua visão:</Text>
+      <Card style={{ padding: 10, marginTop: 5, marginBottom: 15 }}>
+        <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</Text>
+      </Card>
+      <Text style={styles.txtTopics}>Seus temas de interesse:</Text>
+      <View style={styles.interessesContainer}>
+        <View style={{ flexDirection: 'row', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+          <Text style={styles.interesseItem}>Liberação das drogas</Text>
+          <Text style={styles.interesseItem}>Aborto</Text>
+          <Text style={styles.interesseItem}>Armamento</Text>
+          <Text style={styles.interesseItem}>Armamento</Text>
+          <Text style={styles.interesseItem}>Armamento</Text>
+        </View>
+      </View>
+      <Image style={{ width: 200, height: 200, alignSelf: 'center', marginTop: 10, resizeMode: 'contain', }} source={require('../../../assets/coordenadas.jpg')} />
+      <TouchableOpacity style={styles.btn}>
+        <Text>Refazer teste</Text>
+      </TouchableOpacity>
+    </View>
+
+
+  </ScrollView>;
+}
+
+
+const styles = StyleSheet.create({
+  containerScroll: {
+    backgroundColor: 'white',
+  },
+  capa: {
+    width: '100%',
+    height: capaHeight,
+    alignItems: 'center'
+  },
+  avatar: {
+    marginTop: capaHeight - 60
+  },
+  txtNome: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    textAlign: 'center'
+  },
+  containerConteudo: {
+    marginTop: 100,
+    padding: 25
+  },
+  txtTopics: {
+    fontWeight: 'bold',
+    fontSize: 15
+  },
+  interessesContainer: {
+    marginTop: 10
+  },
+  interesseItem: {
+    borderRadius: 10,
+    backgroundColor: '#6B84C5',
+    paddingHorizontal: 7,
+    paddingVertical: 5,
+    marginLeft: 10,
+    marginTop: 10,
+    color: 'white'
+  },
+  btn:{
+    borderRadius:20,
+    borderWidth:1,
+    borderColor:'blue',
+    alignSelf:'center',
+    padding:7
+  }
+})

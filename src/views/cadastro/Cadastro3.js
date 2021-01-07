@@ -32,7 +32,7 @@ export default props => {
             {/* <Botao nome="Finalizar" avancar="BottomTab" />  */}
             <Button title="teste" 
             onPress={() => {
-                navigation.navigate("BTab",{screen:'Home'})
+                navigation.navigate("AppStack")
             }} />
         </View>)
 }

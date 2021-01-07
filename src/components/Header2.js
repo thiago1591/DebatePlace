@@ -1,15 +1,19 @@
 import React from 'react';
-import { View,Text,StyleSheet } from 'react-native';
+import { View,Text,StyleSheet,TouchableOpacity } from 'react-native';
 import UserAvatar from "@muhzi/react-native-user-avatar";
+import { useNavigation } from '@react-navigation/native';
 
 export default props => {
+  const navigation = useNavigation();
   return <View style={styles.header}>
   <View style={styles.headerInner}>
+    <TouchableOpacity onPress={()=>{navigation.navigate("MeuPerfil")}}>
     <UserAvatar
       size={35}
       backgroundColor="#0be881"
       src="https://images.pexels.com/photos/4403924/pexels-photo-4403924.jpeg"
     />
+    </TouchableOpacity>
     <Text style={styles.inicioTxt}>TIMELINE</Text>
   </View>
 </View>
