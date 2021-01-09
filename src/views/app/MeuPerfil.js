@@ -1,25 +1,35 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import UserAvatar from "@muhzi/react-native-user-avatar";
-import { Dimensions, ImageBackground, ScrollView, StyleSheet,Image,TouchableOpacity } from 'react-native';
+import { Dimensions, ImageBackground, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Card } from 'react-native-paper';
 import { Button } from 'react-native-elements';
-
+import Icons from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 const capaHeight = 30 * Dimensions.get('window').height / 100
 
 export default props => {
+  const navigation = useNavigation();
   return <ScrollView style={styles.containerScroll}>
     <ImageBackground
       source={require('../../../assets/math.jpg')}
       style={styles.capa}>
+      <TouchableOpacity style={styles.btnVoltar}>
+        <Icons name={'arrow-back'} size={30} color='black' style={{ marginLeft: '7%', marginTop: '6%' }} />
+      </TouchableOpacity>
       <View style={styles.avatar}>
         <UserAvatar
           size={120}
           backgroundColor="#0be881"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg"
         />
-        <Text style={styles.txtNome}>Thiago André</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <Text style={styles.txtNome}>Thiago André</Text>
+          <TouchableOpacity>
+            <Icons style={{ marginLeft: 10 }} name={'edit'} size={15} color='black' />
+          </TouchableOpacity>
+        </View>
       </View>
 
     </ImageBackground>
@@ -39,10 +49,25 @@ export default props => {
           <Text style={styles.interesseItem}>Armamento</Text>
         </View>
       </View>
+      <Text style={styles.txtTopics}>Suas coordenadas:</Text>
       <Image style={{ width: 200, height: 200, alignSelf: 'center', marginTop: 10, resizeMode: 'contain', }} source={require('../../../assets/coordenadas.jpg')} />
-      <TouchableOpacity style={styles.btn}>
-        <Text>Refazer teste</Text>
-      </TouchableOpacity>
+      <View style={{ alignSelf: 'center' }}>
+        <TouchableOpacity 
+        onPress={()=>{navigation.navigate("TesteView")}}
+        style={styles.btn}>
+          <Text style={styles.txtBtn}>
+            refazer teste
+        </Text>
+        </TouchableOpacity>
+
+        <View style={{ marginTop: 10 }} />
+
+        <TouchableOpacity style={styles.btn}>
+          <Text style={styles.txtBtn}>
+            escolher coordenadas
+        </Text>
+        </TouchableOpacity>
+      </View>
     </View>
 
 
@@ -76,7 +101,8 @@ const styles = StyleSheet.create({
     fontSize: 15
   },
   interessesContainer: {
-    marginTop: 10
+    marginTop: 10,
+    marginBottom: 15
   },
   interesseItem: {
     borderRadius: 10,
@@ -87,11 +113,25 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: 'white'
   },
-  btn:{
-    borderRadius:20,
-    borderWidth:1,
-    borderColor:'blue',
-    alignSelf:'center',
-    padding:7
+  btn: {
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: '#D9DCEC',
+    alignSelf: 'center',
+    padding: 10
+  },
+  txtBtn: {
+    fontWeight: 'bold',
+    color: '#7986CE',
+    fontSize: 15
+  },
+  btnVoltar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'white',
+    position: 'absolute',
+    left: 10,
+    top: 10
   }
 })
