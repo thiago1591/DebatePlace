@@ -18,27 +18,37 @@ export default props => {
       <TouchableOpacity style={styles.btnVoltar}>
         <Icons name={'arrow-back'} size={30} color='black' style={{ marginLeft: '7%', marginTop: '6%' }} />
       </TouchableOpacity>
+
       <View style={styles.avatar}>
         <UserAvatar
           size={120}
           backgroundColor="#0be881"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg"
         />
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.txtNome}>Thiago André</Text>
-          <TouchableOpacity>
-            <Icons style={{ marginLeft: 10 }} name={'edit'} size={15} color='black' />
-          </TouchableOpacity>
-        </View>
+        <Text style={styles.txtNome}>Thiago André</Text>
       </View>
+
+      <View style={{ marginTop: 15 }}>
+      
+          <TouchableOpacity onPress={()=>{navigation.navigate('MeusDebatesCriados')}}>
+            <Card  elevation={3} style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
+              <Text style={{ textAlign: 'center' }}>Debates criados</Text>
+              <Text style={[styles.txtTopics], { textAlign: 'center' }}>1</Text>
+            </Card>
+          </TouchableOpacity>
+
+          
+        </View>
+
 
     </ImageBackground>
 
     <View style={styles.containerConteudo}>
       <Text style={styles.txtTopics}>Sua visão:</Text>
-      <Card style={{ padding: 10, marginTop: 5, marginBottom: 15 }}>
+      <Card elevation={1} style={{ padding: 10, marginTop: 5, marginBottom: 15 }}>
         <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</Text>
       </Card>
+
       <Text style={styles.txtTopics}>Seus temas de interesse:</Text>
       <View style={styles.interessesContainer}>
         <View style={{ flexDirection: 'row', alignItems: 'flex-start', flexWrap: 'wrap' }}>
@@ -49,12 +59,13 @@ export default props => {
           <Text style={styles.interesseItem}>Armamento</Text>
         </View>
       </View>
+
       <Text style={styles.txtTopics}>Suas coordenadas:</Text>
       <Image style={{ width: 200, height: 200, alignSelf: 'center', marginTop: 10, resizeMode: 'contain', }} source={require('../../../assets/coordenadas.jpg')} />
       <View style={{ alignSelf: 'center' }}>
-        <TouchableOpacity 
-        onPress={()=>{navigation.navigate("TesteView")}}
-        style={styles.btn}>
+        <TouchableOpacity
+          onPress={() => { navigation.navigate("TesteView") }}
+          style={styles.btn}>
           <Text style={styles.txtBtn}>
             refazer teste
         </Text>
@@ -68,6 +79,13 @@ export default props => {
         </Text>
         </TouchableOpacity>
       </View>
+
+      <TouchableOpacity onPress={()=>{navigation.navigate('MeusDebatesCriados')}}>
+            <Card  elevation={3} style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
+              <Text style={{ textAlign: 'center' }}>Debates criados</Text>
+              <Text style={[styles.txtTopics], { textAlign: 'center' }}>1</Text>
+            </Card>
+          </TouchableOpacity>
     </View>
 
 
@@ -85,7 +103,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   avatar: {
-    marginTop: capaHeight - 60
+    marginTop: capaHeight - 60,
+    alignItems: 'center'
   },
   txtNome: {
     fontWeight: 'bold',
@@ -93,7 +112,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   containerConteudo: {
-    marginTop: 100,
+    marginTop: 150,
     padding: 25
   },
   txtTopics: {

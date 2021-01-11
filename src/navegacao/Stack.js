@@ -10,17 +10,19 @@ import MeuPerfil from '../views/app/MeuPerfil'
 import intrucoesTeste from '../views/testeCoordenadas/instrucoesView'
 import BTab  from './BottomTab'
 import TesteView from '../views/testeCoordenadas/testeView'
+import MeusDebatesCriados from '../views/app/MeusDebatesCriados'
 
 const Stack = createStackNavigator()
 
 const DebatePublicoStack = createStackNavigator();
 function AppStack() {
   return (
-    <DebatePublicoStack.Navigator initialRouteName="DebatesPublicos">
+    <DebatePublicoStack.Navigator initialRouteName="MeuPerfil">
       <DebatePublicoStack.Screen name="DebatesPublicos" component={BTab} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
+      <DebatePublicoStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={{headerShown:false}}/>
 
     </DebatePublicoStack.Navigator>
   );
