@@ -12,17 +12,18 @@ import BTab  from './BottomTab'
 import TesteView from '../views/testeCoordenadas/testeView'
 import MeusDebatesCriados from '../views/app/MeusDebatesCriados'
 
+
 const Stack = createStackNavigator()
 
 const DebatePublicoStack = createStackNavigator();
 function AppStack() {
   return (
-    <DebatePublicoStack.Navigator initialRouteName="MeuPerfil">
+    <DebatePublicoStack.Navigator initialRouteName="DebatesPublicos">
       <DebatePublicoStack.Screen name="DebatesPublicos" component={BTab} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
-      <DebatePublicoStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={{headerShown:false}}/>
+      <DebatePublicoStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={{title:'Meus Debates Criados',headerTitleStyle:{fontSize:18}, headerStyle:{height:50}}}/>
 
     </DebatePublicoStack.Navigator>
   );

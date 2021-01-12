@@ -1,15 +1,19 @@
 import React from 'react';
-import { View,Text,StyleSheet} from 'react-native';
-
+import { View,Text,StyleSheet,FlatList} from 'react-native';
+import MeusDebatesCriados from '../../components/ComponenteMeusDebatesCriados'
 
 export default props => {
-  return <View>
-            <Text>Liberalismo é realmente o unico sistema bom?</Text>
+    const array = [1,2,3,4,5,6,7,8,9,10]
+  return <View style={{padding:5}}>
+            <FlatList
+       showsVerticalScrollIndicator={false}
+        data={array}
+        renderItem={() => <MeusDebatesCriados />}
+        keyExtractor={(index) => index.toString()}
+        />
        </View>
 }
 
 const styles = StyleSheet.create({
 
 })
-
-

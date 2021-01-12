@@ -19,29 +19,26 @@ export default props => {
         <Icons name={'arrow-back'} size={30} color='black' style={{ marginLeft: '7%', marginTop: '6%' }} />
       </TouchableOpacity>
 
-      <View style={styles.avatar}>
-        <UserAvatar
+     <View style={{flex:1,justifyContent:'flex-end'}}>
+     <View style={{marginBottom:-60}}>
+     <UserAvatar
           size={120}
           backgroundColor="#0be881"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg"
         />
         <Text style={styles.txtNome}>Thiago André</Text>
-      </View>
+     </View>
+     </View>
 
-      <View style={{ marginTop: 15 }}>
-      
-          <TouchableOpacity onPress={()=>{navigation.navigate('MeusDebatesCriados')}}>
-            <Card  elevation={3} style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
-              <Text style={{ textAlign: 'center' }}>Debates criados</Text>
-              <Text style={[styles.txtTopics], { textAlign: 'center' }}>1</Text>
-            </Card>
-          </TouchableOpacity>
-
-          
-        </View>
+  
 
 
     </ImageBackground>
+
+    <Card onPress={()=>{navigation.navigate('MeusDebatesCriados')}} elevation={3} style={{width:'40%',alignSelf:'center',paddingVertical:10,marginTop:70}}>
+      <Text style={{fontSize:13,textAlign:'center'}}>DEBATES CRIADOS</Text>
+      <Text style={{fontSize:22,fontWeight:'bold',textAlign:'center'}}>1</Text>
+    </Card>
 
     <View style={styles.containerConteudo}>
       <Text style={styles.txtTopics}>Sua visão:</Text>
@@ -80,12 +77,6 @@ export default props => {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity onPress={()=>{navigation.navigate('MeusDebatesCriados')}}>
-            <Card  elevation={3} style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
-              <Text style={{ textAlign: 'center' }}>Debates criados</Text>
-              <Text style={[styles.txtTopics], { textAlign: 'center' }}>1</Text>
-            </Card>
-          </TouchableOpacity>
     </View>
 
 
@@ -112,7 +103,6 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   containerConteudo: {
-    marginTop: 150,
     padding: 25
   },
   txtTopics: {
