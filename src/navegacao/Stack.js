@@ -24,13 +24,12 @@ function AppStack() {
       <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={{title:'Meus Debates Criados',headerTitleStyle:{fontSize:18}, headerStyle:{height:50}}}/>
-
     </DebatePublicoStack.Navigator>
   );
 }
 
 export default props => {
-  return <Stack.Navigator initialRouteName="AppStack"
+  return <Stack.Navigator initialRouteName="Welcome"
         screenOptions={{headerShown: false}}>
         <Stack.Screen  name ="Welcome" component={Welcome} />
         <Stack.Screen  name ="Avisos" component={Avisos} />
