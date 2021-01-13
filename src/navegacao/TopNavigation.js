@@ -1,7 +1,7 @@
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import MeusDebatesPublicos from '../views/app/MeusDebatesPublicos'
-import MeusDebatesPrivados from '../views/app/MeusDebatesPrivados'
+import MeusDebatesPublicos from '../views/app/home/MeusDebatesPublicos'
+import MeusDebatesPrivados from '../views/app/home/MeusDebatesPrivados'
 
 const Tab = createMaterialTopTabNavigator();
 

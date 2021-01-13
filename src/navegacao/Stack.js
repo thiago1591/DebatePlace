@@ -29,7 +29,7 @@ function AppStack() {
 }
 
 export default props => {
-  return <Stack.Navigator initialRouteName="Welcome"
+  return <Stack.Navigator initialRouteName="AppStack"
         screenOptions={{headerShown: false}}>
         <Stack.Screen  name ="Welcome" component={Welcome} />
         <Stack.Screen  name ="Avisos" component={Avisos} />
