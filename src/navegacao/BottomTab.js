@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import DebatesPrivados from '../views/app/DebatesPrivados'
-import DebatesPublicos from '../views/app/DebatesPublicos'
+import DebatesPrivados from '../views/app/debatesPrivados/DebaterOuPularPage'
+import DebatesPublicos from '../views/app/debatesPublicos/Timeline'
 const Tab = createBottomTabNavigator();
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from './HeaderTab'
