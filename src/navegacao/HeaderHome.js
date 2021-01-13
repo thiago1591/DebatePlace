@@ -1,18 +1,20 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
-import { View, Button } from 'react-native'
-import TopNavigation from '../navegacao/TopNavigation'
+import { View, Text } from 'react-native'
+import TopNavigation from './TopNavigation'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import UserAvatar from "@muhzi/react-native-user-avatar";
 
 const Stack = createStackNavigator()
 
+
+//Essa Stack é responsavel apenas por incluir um estilo de header acima do header do TopNavigation, na pagina Home
 export default props => {
     return <Stack.Navigator
         initialRouteName="TopNavigation"
         screenOptions={{
             headerStyle: {
-                backgroundColor: '#6B84C5',
+                backgroundColor: '#7c99e2',
                 shadowOpacity:0,
                 elevation:0
             },
@@ -21,20 +23,19 @@ export default props => {
             }
         }}>
         <Stack.Screen options={{
-            title: "MEUS DEBATES",
-            headerTitleStyle: { color: "white" },
-            headerRight: () => (
-                <View style={{ paddingRight: 10,flexDirection:'row' }}>
+            title: "",
+            headerLeft: () => (
+                <View style={{ paddingLeft: 10,flexDirection:'row' }}>
                     <UserAvatar
                         userName="John Samuel"
-                        size={30}
+                        size={35}
                         backgroundColor="#0be881"
                         src="https://images.pexels.com/photos/4403924/pexels-photo-4403924.jpeg"
                     />
-                    <Ionicons style={{marginLeft:15}} name="settings-outline" size={25} color="white" />
+                    <Text style={{fontSize:20,fontFamily:'sans-serif-medium',color:'white',marginLeft:10,alignSelf:'center'}}>Debates Aceitos</Text>
                 </View>
             ),
-            headerLeft: () => { return null }
+            headerRight: () => { return <Ionicons style={{marginRight:10}} name="settings-outline" size={25} color="white" /> }
         }}
             name="TopNavigation"
             component={TopNavigation} />

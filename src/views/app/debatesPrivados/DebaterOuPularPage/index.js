@@ -10,7 +10,7 @@ const DebaterOuPularPage = () => {
   const navigation = useNavigation();
   return (
     <>
-      <Header />
+      <Header title="Debates Privados"/>
 
       <Container>
         <CardWrapper>

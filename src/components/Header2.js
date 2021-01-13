@@ -14,7 +14,7 @@ export default props => {
       src="https://images.pexels.com/photos/4403924/pexels-photo-4403924.jpeg"
     />
     </TouchableOpacity>
-    <Text style={styles.inicioTxt}>TIMELINE</Text>
+    <Text style={styles.inicioTxt}>{props.title}</Text>
   </View>
 </View>
 }
@@ -22,19 +22,19 @@ export default props => {
 const styles = StyleSheet.create({
     header: {
         paddingVertical:10,
-        backgroundColor: '#6B84C5',
+        backgroundColor: '#7c99e2',
         marginBottom: 5,
         paddingLeft:10
       },
       headerInner: {
         flexDirection: 'row',
-        width: '35%',
         
       },
       inicioTxt: {
         alignSelf: 'center',
-        fontSize: 16,
+        fontSize: 20,
         marginLeft: 10,
-        color:'white'
+        color:'white',
+        fontFamily:'sans-serif-medium'
       },
 })

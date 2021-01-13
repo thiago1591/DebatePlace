@@ -25,6 +25,7 @@ export const CoordenadasImage = styled.Image`
     height:180px;
     align-self:center;
     margin:10px 0 0 0;
+    resize-mode:contain;
 `;
 
 export const ButtonContainer = styled.View`

@@ -8,18 +8,17 @@ import Cadastro2 from '../views/cadastro/Cadastro2'
 import Cadastro3 from '../views/cadastro/Cadastro3'
 import MeuPerfil from '../views/app/MeuPerfil'
 import intrucoesTeste from '../views/testeCoordenadas/instrucoesView'
-import BTab  from './BottomTab'
+import BottomTab  from './BottomTab'
 import TesteView from '../views/testeCoordenadas/testeView'
 import MeusDebatesCriados from '../views/app/MeusDebatesCriados'
 
-
 const Stack = createStackNavigator()
-
 const DebatePublicoStack = createStackNavigator();
-function AppStack() {
+
+function BottomTabStack() {
   return (
     <DebatePublicoStack.Navigator initialRouteName="DebatesPublicos">
-      <DebatePublicoStack.Screen name="DebatesPublicos" component={BTab} options={{headerShown:false}}/>
+      <DebatePublicoStack.Screen name="BottomTab" component={BottomTab} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
@@ -29,7 +28,7 @@ function AppStack() {
 }
 
 export default props => {
-  return <Stack.Navigator initialRouteName="AppStack"
+  return <Stack.Navigator initialRouteName="BottomTabStack"
         screenOptions={{headerShown: false}}>
         <Stack.Screen  name ="Welcome" component={Welcome} />
         <Stack.Screen  name ="Avisos" component={Avisos} />
@@ -37,6 +36,6 @@ export default props => {
         <Stack.Screen  name ="Cadastro1" component={Cadastro1} />
         <Stack.Screen  name ="Cadastro2" component={Cadastro2} />
         <Stack.Screen  name ="Cadastro3" component={Cadastro3} />
-        <Stack.Screen  name ="AppStack" component={AppStack} />
+        <Stack.Screen  name ="BottomTabStack" component={BottomTabStack} />
        </Stack.Navigator>;
 }

@@ -9,7 +9,7 @@ import { Container } from './styles';
 const Timeline = () => {
   return (
     <ScrollView>
-    <Header />
+    <Header title="Debates Públicos" />
     <Container>
       <ComponenteDebate />
       <ComponenteDebate />

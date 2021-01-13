@@ -10,7 +10,7 @@ export default props => {
         tabBarOptions={{
             activeTintColor:'white',
             style:{
-                backgroundColor:'#6B84C5'
+                backgroundColor:'#7c99e2'
             },
             indicatorStyle:{
                 backgroundColor: 'white'
