@@ -56,9 +56,9 @@ export const Conteudo = styled.View`
     padding:25px;
 `
 
-export const txtTopics = styled.Text`
-    font-weight:bold;
+export const TxtTopics = styled.Text`
     font-size:15px;
+    font-weight:bold;
 `
 
 export const CardWrapper2 = styled.View`
@@ -66,10 +66,34 @@ export const CardWrapper2 = styled.View`
     margin: 5px 0 15px 0;
 `
 
+export const CoordenadasContainer = styled.Text`
+    padding-bottom:15px;
+`
+
+
 export const CoordenadasImage = styled.Image`
     width:200px;
     height:200px;
     align-self: center;
     margin: 10px 0 0 0;
 `
+
+export const ButtonsContainer = styled.View`
+    align-self: center;
+`
+
+export const Button = styled.TouchableOpacity`
+    border-radius:4px;
+    border-width:1px;
+    border-color:#D9DCEC;
+    align-self: center;
+    padding:10px;
+    margin-bottom:10px
+`
+
+export const TxtButton = styled.Text`
+    font-weight:bold;
+    color:#7986CE;
+    font-size:15px;
+` 
 

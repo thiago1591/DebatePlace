@@ -7,7 +7,7 @@ import UserAvatar from "@muhzi/react-native-user-avatar";
 import { Card } from 'react-native-paper';
 import {
     ScrollView, Capa, ReturnButton, TxtName, UserImageContainer, CardWrapper1, TxtCardTitle,
-    TxtCardNumber, Conteudo, txtTopics, CardWrapper2, CoordenadasImage, ButtonsComponent
+    TxtCardNumber, Conteudo, TxtTopics, CardWrapper2, CoordenadasImage, ButtonsContainer, Button, TxtButton
 } from './styles';
 
 const MeuPerfil = () => {
@@ -32,31 +32,42 @@ const MeuPerfil = () => {
             </Capa>
 
             <CardWrapper1>
-                <Card 
-                style={{paddingVertical:10}} 
-                elevation={3} 
-                onPress={()=>{navigation.navigate('MeusDebatesCriados')}}>
+                <Card
+                    style={{ paddingHorizontal: 10, paddingVertical: 10 }}
+                    elevation={3}
+                    onPress={() => { navigation.navigate('MeusDebatesCriados') }}>
                     <TxtCardTitle>DEBATES PÚBLICOS CRIADOS</TxtCardTitle>
                     <TxtCardNumber>1</TxtCardNumber>
                 </Card>
             </CardWrapper1>
-            <Conteudo>
-                <Text>Sua visão:</Text>
 
+            <Conteudo>
+                <TxtTopics>Sua visão:</TxtTopics>
                 <CardWrapper2>
-                    <Card elevation={3} style={{padding:8}}>
+                    <Card style={{ padding: 10 }}>
                         <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                         </Text>
                     </Card>
                 </CardWrapper2>
 
-                <Text>Seus temas de interesse:</Text>
-                <InteressesList />
+                <View style={{ paddingBottom: 15 }}>
+                    <TxtTopics>Seus temas de interesse:</TxtTopics>
+                    <InteressesList />
+                </View>
 
-                <Text>Suas coordenadas:</Text>
-                <CoordenadasImage source={require('../../../../assets/coordenadas.jpg')} />
-
+                <TxtTopics>Suas coordenadas:</TxtTopics>
+                <CoordenadasImage style={{ resizeMode: 'contain' }} source={require('../../../../assets/coordenadas.jpg')} />
             </Conteudo>
+
+            <ButtonsContainer>
+                <Button onPress={() => { navigation.navigate("TesteView") }}>
+                    <TxtButton>refazer teste</TxtButton>
+                </Button>
+
+                <Button>
+                    <TxtButton>escolher coordenadas </TxtButton>
+                </Button>
+            </ButtonsContainer>
 
         </ScrollView>
     )

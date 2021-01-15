@@ -1,18 +1,15 @@
 import React from 'react';
-import { View,Text,StyleSheet,TouchableOpacity } from 'react-native';
+import { View,Text,StyleSheet,TouchableOpacity,Image} from 'react-native';
 import UserAvatar from "@muhzi/react-native-user-avatar";
 import { useNavigation } from '@react-navigation/native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default props => {
   const navigation = useNavigation();
   return <View style={styles.header}>
   <View style={styles.headerInner}>
     <TouchableOpacity onPress={()=>{navigation.navigate("MeuPerfil")}}>
-    <UserAvatar
-      size={35}
-      backgroundColor="#0be881"
-      src="https://images.pexels.com/photos/4403924/pexels-photo-4403924.jpeg"
-    />
+    <Image source={require('../../assets/foto-default.png')} style={styles.userImage} />
     </TouchableOpacity>
     <Text style={styles.inicioTxt}>{props.title}</Text>
   </View>
@@ -21,20 +18,26 @@ export default props => {
 
 const styles = StyleSheet.create({
     header: {
-        paddingVertical:10,
+        paddingVertical:hp('1.2%'),
         backgroundColor: '#7c99e2',
         marginBottom: 5,
-        paddingLeft:10
+        paddingLeft:wp('3%'),
       },
       headerInner: {
         flexDirection: 'row',
-        
+        alignItems:'center',
       },
       inicioTxt: {
         alignSelf: 'center',
-        fontSize: 20,
+        fontSize: hp('2.7%'),
         marginLeft: 10,
         color:'white',
         fontFamily:'sans-serif-medium'
       },
+      userImage:{
+        width:hp('4.7%'),
+        height:hp('4.7%'),
+        borderRadius:hp('2.45%'),
+
+      }
 })

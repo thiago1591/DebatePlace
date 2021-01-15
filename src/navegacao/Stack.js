@@ -17,7 +17,7 @@ const DebatePublicoStack = createStackNavigator();
 
 function BottomTabStack() {
   return (
-    <DebatePublicoStack.Navigator initialRouteName="DebatesPublicos">
+    <DebatePublicoStack.Navigator initialRouteName="BottomTab">
       <DebatePublicoStack.Screen name="BottomTab" component={BottomTab} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>

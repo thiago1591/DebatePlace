@@ -4,6 +4,7 @@ import DebatesPrivados from '../views/app/debatesPrivados/DebaterOuPularPage'
 import DebatesPublicos from '../views/app/debatesPublicos/Timeline'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from './HeaderHome'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,6 +28,7 @@ export default function BottomTab() {
       }
     })}
     tabBarOptions={{
+      style:{height:hp('6.5%')},
     activeTintColor:'#7c99e2',
     activeBackgroundColor: '#FFF',
     inactiveBackgroundColor: '#FFF',

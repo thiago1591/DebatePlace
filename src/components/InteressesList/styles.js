@@ -1,13 +1,19 @@
 import styled from 'styled-components/native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export const InteressesContainer = styled.View`
-    margin:15px 0 0 0;
+flex-wrap:wrap;
 `;
 
 export const InteresseItem = styled.Text`
-    border-radius:10px;
-    background-color:#6B84C5;
-    padding: 3px 5px;
-    margin: 10px 0 0 10px;
-    color:white;
+    border-radius:${`${hp('2.5%')}px`};
+    border-width:1px;
+    border-color:#87a19d;
+    padding:${`${hp('0.8%')}px`} ${`${hp('1.2%')}px`};
+    margin: ${`${hp('1%')}px`} ${`${hp('1%')}px`} 0 0;
+    color:#87a19d;
+    font-size:${`${hp('1.7%')}px`};
 `
+
+
+  
