@@ -7,7 +7,7 @@ import UserAvatar from "@muhzi/react-native-user-avatar";
 import { Card } from 'react-native-paper';
 import {
     ScrollView, Capa, ReturnButton, TxtName, UserImageContainer, CardWrapper1, TxtCardTitle,
-    TxtCardNumber, Conteudo, TxtTopics, CardWrapper2, CoordenadasImage, ButtonsContainer, Button, TxtButton
+    TxtCardNumber, Conteudo, TxtTopics, CardWrapper2, CoordenadasImage, CoordenadaImageContainer
 } from './styles';
 
 const MeuPerfil = () => {
@@ -42,7 +42,7 @@ const MeuPerfil = () => {
             </CardWrapper1>
 
             <Conteudo>
-                <TxtTopics>Sua visão:</TxtTopics>
+                <TxtTopics>Visão:</TxtTopics>
                 <CardWrapper2>
                     <Card style={{ padding: 10 }}>
                         <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
@@ -50,24 +50,15 @@ const MeuPerfil = () => {
                     </Card>
                 </CardWrapper2>
 
-                <View style={{ paddingBottom: 15 }}>
-                    <TxtTopics>Seus temas de interesse:</TxtTopics>
+                    <TxtTopics>Temas de interesse:</TxtTopics>
                     <InteressesList />
-                </View>
-
-                <TxtTopics>Suas coordenadas:</TxtTopics>
-                <CoordenadasImage style={{ resizeMode: 'contain' }} source={require('../../../../assets/coordenadas.jpg')} />
+                
+                <CoordenadaImageContainer>
+                    <TxtTopics>Coordenadas:</TxtTopics>
+                    <CoordenadasImage style={{ resizeMode: 'contain' }} source={require('../../../../assets/coordenadas.jpg')} />
+                </CoordenadaImageContainer>
+               
             </Conteudo>
-
-            <ButtonsContainer>
-                <Button onPress={() => { navigation.navigate("TesteView") }}>
-                    <TxtButton>refazer teste</TxtButton>
-                </Button>
-
-                <Button>
-                    <TxtButton>escolher coordenadas </TxtButton>
-                </Button>
-            </ButtonsContainer>
 
         </ScrollView>
     )

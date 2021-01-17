@@ -1,8 +1,8 @@
 import React from 'react';
-import { View,Button } from 'react-native';
+import { View,Text} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { Container, BotaoView, Title, SubTitle } from './styles';
+import { Container, BotaoView, Title, SubTitle,Button,TxtButton,Icon } from './styles';
 
 const Welcome = () => {
     const navigation = useNavigation();
@@ -17,9 +17,16 @@ const Welcome = () => {
 
             <BotaoView>
                 <Button
-                    title='Avançar'
-                    onPress={() => navigation.navigate('Avisos')}
-               />
+                    onPress={() => navigation.navigate('Avisos')}>
+                        <Icon source={require('../../../assets/googleIcon.png')} />
+                        <TxtButton>Entrar com o Google</TxtButton>
+                    </Button>
+                    <Button
+                    onPress={() => navigation.navigate('Avisos')}>
+                        <Icon resizeMode='contain' source={require('../../../assets/emailIcon5.png')} />
+                        <TxtButton>Entrar com o Email</TxtButton>
+                    </Button> 
+                    <Text style={{color:'white',alignSelf:'center',fontSize:16,marginTop:5}}>Já tem uma conta? <Text style={{fontWeight:'bold'}}>Entre</Text></Text>
             </BotaoView>
 
         </Container>
