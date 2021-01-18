@@ -1,63 +1,67 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Dimensions, Icon, ScrollView} from 'react-native'
+import { View} from 'react-native'
 import Header from '../../../../components/Header2'
 import { useNavigation } from '@react-navigation/native';
 import InteressesList from '../../../../components/InteressesList'
 import UserAvatar from "@muhzi/react-native-user-avatar";
 import { Card } from 'react-native-paper';
-import { Container, CardWrapper, TxtName, UserImage, CoordenadasImage, VisaoContainer, ButtonContainer, Button, TxtButton, TxtTopic, TxtOpnion, BackButton,UserImageContainer,InteressesContainer } from './styles';
-
-var screenHeight = Dimensions.get('window').height;
+import { Container, CardWrapper, TxtName, UserImage, CoordenadasImage, VisaoContainer, Border, ButtonContainer, Button, TxtButton, TxtTopic, TxtOpnion, BackButton, UserImageContainer, InteressesContainer} from './styles';
+import Swiper from 'react-native-deck-swiper';
+import data from '../../data'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const DebaterOuPularPage = () => {
   const navigation = useNavigation();
+  const [index, setIndex] = React.useState(0);
+  const onSwiped = () => {
+    setIndex((index + 1) % data.length);
+  }
   return (
     <>
       <View>
         <Header title="Debates Privados" />
       </View>
 
-      <Container style={{flex:1}}>
+      <Container style={{ flex: 1}}>
+        
+        <Card style={{ paddingHorizontal: 20,flex:1}}>
 
-        <Card style={{paddingHorizontal: 20,flex:1}}>
-          <ScrollView showsVerticalScrollIndicator ={false} >
           <UserImageContainer>
-            <UserImage  source={require('../../../../../assets/foto-default.png')} />
+            <UserImage source={require('../../../../../assets/foto-default.png')} />
             <TxtName>Thiago André</TxtName>
-
           </UserImageContainer>
 
           <VisaoContainer>
-            <TxtOpnion> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a unknown printer took a galley of type and scrambled</TxtOpnion>
+            <Border>
+              <TxtTopic>Texto Resumitivo</TxtTopic>
+              <TxtOpnion>Lorem Ipsum is simply dummy text asda ad aa  asdasd asdas Lorem Ipsum is simply Lorem Ipsum is simply dummy text asda ad aa  asdasd asdas Lorem Ipsum is simply Lorem Ipsum is simply  is simply  </TxtOpnion>
+            </Border>
           </VisaoContainer>
 
           <InteressesContainer>
             <TxtTopic>Temas de interesse</TxtTopic>
             <InteressesList />
           </InteressesContainer>
-          <View style={{justifyContent: 'center', paddingBottom: 10}}>
+
+          <View style={{ justifyContent: 'center', flex: 1 }}>
             <CoordenadasImage style={{ resizeMode: 'contain' }} source={require('../../../../../assets/coordenadas.jpg')} />
           </View>
-          <View  />
-
-          </ScrollView>
-        </Card>
-
+          
+        </Card> 
+      
       </Container>
 
-        <ButtonContainer>
-          <Button>
-            <TxtButton>Pular</TxtButton>
-          </Button>
+      <ButtonContainer>
 
 
-          <BackButton>
 
-          </BackButton>
-          <Button>
-            <TxtButton>Debater</TxtButton>
-          </Button>
-        </ButtonContainer>
+        <BackButton>
+
+        </BackButton>
+        <Button onPress={() => { navigation.navigate('EscolherTemaDebate') }}>
+          <TxtButton>Debater</TxtButton>
+        </Button>
+      </ButtonContainer>
     </>
   )
 }

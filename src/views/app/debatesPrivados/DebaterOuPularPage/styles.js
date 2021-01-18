@@ -16,15 +16,13 @@ export const CardWrapper = styled.View`
 export const UserImageContainer = styled.View`
     align-items:center;
     justify-content:center;
-    margin-bottom:${`${hp('4%')}px`};
-    flex:10;
-    margin-top:${`${hp('1%')}px`};
+    flex:1;
 `
 
 export const UserImage = styled.Image`
     align-self: center;
-    height:${`${hp('13%')}px`};
-    width:${`${hp('13%')}px`};
+    height:${`${hp('11%')}px`};
+    width:${`${hp('11%')}px`};
     border-radius:${`${hp('6.25%')}px`};
     border-width:2px;
 `;
@@ -41,28 +39,30 @@ export const TxtTopic = styled.Text`
 `
 
 export const TxtOpnion = styled.Text`
-    font-size:${`${hp('2.1%')}px`};
+    font-size:${`${hp('2%')}px`};
 `
 
 export const VisaoContainer = styled.View`
+    padding:${`${hp('1%')}px`} 0;
     border-top-width:1px;
     border-top-color: #f0e7e6;
     border-bottom-width:1px;
     border-bottom-color: #f0e7e6;
-    padding:${`${hp('1%')}px`} 0;
-    justify-content:center;
-    margin-bottom:${`${hp('4%')}px`};
+`
+export const Border = styled.View`
+    padding: ${`${hp('1%')}px`} 0;
 `
 export const InteressesContainer = styled.View`
     justify-content:center;
-    margin-bottom:${`${hp('4%')}px`};
+    flex:1;
+    margin-top:${`${hp('1%')}px`};
 `
 
 export const CoordenadasImage = styled.Image`
     align-self:center;
-    height:${`${hp('18%')}px`};
-    width:${`${hp('18%')}px`};
-    margin-top:${`${hp('1%')}px`}
+    height:${`${hp('16%')}px`};
+    width:${`${hp('16%')}px`};
+    margin: ${`${hp('1.2%')}px`};
 `;
 
 export const ButtonContainer = styled.View`

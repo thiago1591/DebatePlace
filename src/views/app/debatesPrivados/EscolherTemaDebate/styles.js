@@ -4,16 +4,14 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 export const Container = styled.View`
   flex:1;
   background-color:white;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
+  padding:0 20px 20px 20px;
 `;
 
 export const UserImageContainer = styled.View`
     align-items:center;
     justify-content:center;
     margin-bottom:${`${hp('4%')}px`};
-    margin-top:${`${hp('1%')}px`};
+    margin-top:${`${hp('2.5%')}px`};
 `
 
 export const UserImage = styled.Image`

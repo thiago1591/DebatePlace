@@ -8,13 +8,11 @@ const InteressesList = () => {
     <InteressesContainer>
     <View style={{ flexDirection: 'row', alignItems: 'flex-start', flexWrap: 'wrap' }}>
      
-      <InteresseItem>Armamento</InteresseItem>
+      <InteresseItem>Armamentoaloremadas</InteresseItem>
       <InteresseItem>Liberação das drogas</InteresseItem>
-      <InteresseItem>Aborto</InteresseItem>
-      <InteresseItem>Liberalismo</InteresseItem>
-      <InteresseItem>Aquecimento global</InteresseItem>
-   
-    
+      <InteresseItem>aborto lorem ipsum</InteresseItem>
+      <InteresseItem>qualquer coisa de tema</InteresseItem>
+      
       
       
     </View>
