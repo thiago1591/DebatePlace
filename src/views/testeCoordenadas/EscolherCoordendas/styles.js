@@ -52,3 +52,24 @@ export const EscolhaContainer = styled.View`
     flex-direction:row;
     justify-content:space-around
 `
+
+export const Button2 = styled.TouchableOpacity`
+    border-color:white;
+    border-radius:${`${hp('1.8%')}px`};
+    margin:0 ${`${hp('1%')}px`};
+    height:${`${hp('6%')}px`};
+    justify-content:center;
+    background-color:#7c99e2;
+`
+export const TxtButton2 = styled.Text`
+    text-align:center;
+    color:white;
+    font-family:sans-serif-medium;
+    font-size:${`${hp('2.5%')}px`}
+`
+
+export const ButtonContainer = styled.View`
+    flex:1;
+    justify-content:flex-end;
+    margin: 0 ${`${wp('2.5%')}px`}
+`

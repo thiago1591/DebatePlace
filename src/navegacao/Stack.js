@@ -16,26 +16,38 @@ import OutrosPerfis from '../views/app/OutrosPerfis'
 import PaginaInstrucoes from '../views/testeCoordenadas/PaginaInstrucoes'
 import ExplicacaoEixos from '../views/testeCoordenadas/ExplicacaoEixos'
 import EscolherCoordendas from  '../views/testeCoordenadas/EscolherCoordendas'
+import DebateInfosScreen from  '../views/app/debatesPrivados/Chat/DebateInfosScreen'
+import ChatScreen from  '../views/app/debatesPrivados/Chat/ChatScreen'
+import Icon from 'react-native-vector-icons/MaterialIcons'
+
 
 const Stack = createStackNavigator()
 const DebatePublicoStack = createStackNavigator();
 
 function BottomTabStack() {
   return (
-    <DebatePublicoStack.Navigator initialRouteName="OutrosPerfis">
+    <DebatePublicoStack.Navigator initialRouteName="ChatScreen">
       <DebatePublicoStack.Screen name="BottomTab" component={BottomTab} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="EscolherTemaDebate" component={EscolherTemaDebate} options={{headerShown:false}}/>
       <DebatePublicoStack.Screen name="OutrosPerfis" component={OutrosPerfis} options={{headerShown:false}}/>
+      <DebatePublicoStack.Screen name="DebateInfosScreen" component={DebateInfosScreen} options={{title:'Informações Debate',headerTitleStyle:{fontSize:18,color:'white'}, headerStyle:{height:50,backgroundColor:'#7c99e2'}}} />
+      <DebatePublicoStack.Screen name="ChatScreen" component={ChatScreen}
+       options={{
+        headerRight:()=>(<><Icon style={{marginRight:10}} name='more-vert'
+        size={25}
+        color={'white'} /></>),
+        title:'Drogas deveriam ser legalizadas? Qual a sua opnião?',headerTitleStyle:{fontSize:18,color:'white',marginLeft:15}, headerStyle:{height:50,backgroundColor:'#7c99e2'}}} 
+       />
       <DebatePublicoStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={{title:'Meus Debates Criados',headerTitleStyle:{fontSize:18}, headerStyle:{height:50}}}/>
     </DebatePublicoStack.Navigator>
   );
 }
 
 export default props => {
-  return <Stack.Navigator initialRouteName="EscolherCoordendas"
+  return <Stack.Navigator initialRouteName="BottomTabStack"
         screenOptions={{headerShown: false}}>
         <Stack.Screen  name ="Welcome" component={Welcome} />
         <Stack.Screen  name ="Avisos" component={Avisos} />

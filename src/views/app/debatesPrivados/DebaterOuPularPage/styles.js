@@ -2,8 +2,6 @@ import styled from 'styled-components/native';
 import {Dimensions } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-
-var screenWidth = Dimensions.get('window').width;
 var screenHeight = Dimensions.get('window').height;
 
 export const Container = styled.View`
