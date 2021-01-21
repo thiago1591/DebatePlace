@@ -1,9 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native'
 import TopNavigation from './TopNavigation'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import UserAvatar from "@muhzi/react-native-user-avatar";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import Header from '../components/Header2'
 
 const Stack = createStackNavigator()
 
@@ -25,15 +26,7 @@ export default props => {
         <Stack.Screen options={{
             title: "",
             headerLeft: () => (
-                <View style={{ paddingLeft: 10,flexDirection:'row' }}>
-                    <UserAvatar
-                        userName="John Samuel"
-                        size={35}
-                        backgroundColor="#0be881"
-                        src="https://images.pexels.com/photos/4403924/pexels-photo-4403924.jpeg"
-                    />
-                    <Text style={{fontSize:20,fontFamily:'sans-serif-medium',color:'white',marginLeft:10,alignSelf:'center'}}>Debates Aceitos</Text>
-                </View>
+                <Header  title="Debates Ativos" />
             ),
             headerRight: () => { return <Ionicons style={{marginRight:10}} name="settings-outline" size={25} color="white" /> }
         }}
@@ -41,3 +34,26 @@ export default props => {
             component={TopNavigation} />
     </Stack.Navigator>;
 }
+
+const styles = StyleSheet.create({
+    header: {
+        paddingVertical:hp('1.2%'),
+        paddingLeft:wp('3%'),
+      },
+      headerInner: {
+        flexDirection: 'row',
+        alignItems:'center',
+      },
+      inicioTxt: {
+        alignSelf: 'center',
+        fontSize: hp('2.7%'),
+        marginLeft: 10,
+        color:'white',
+        fontFamily:'sans-serif-medium'
+      },
+      userImage:{
+        width:hp('4.7%'),
+        height:hp('4.7%'),
+        borderRadius:hp('2.45%'),
+      }
+})

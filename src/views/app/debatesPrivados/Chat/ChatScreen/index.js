@@ -82,7 +82,7 @@ const ChatScreen = () => {
             </InputContainer>
 
             <SendButton>
-            <Icon name="attachment" size={28} color="white" />
+            <Icon name="send" size={28} color="white" />
             </SendButton>
         </SendMessageContainer>
       

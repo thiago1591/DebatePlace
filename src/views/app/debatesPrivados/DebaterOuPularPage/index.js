@@ -1,67 +1,49 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View} from 'react-native'
 import Header from '../../../../components/Header2'
 import { useNavigation } from '@react-navigation/native';
-import InteressesList from '../../../../components/InteressesList'
-import UserAvatar from "@muhzi/react-native-user-avatar";
-import { Card } from 'react-native-paper';
-import { Container, CardWrapper, TxtName, UserImage, CoordenadasImage, VisaoContainer, Border, ButtonContainer, Button, TxtButton, TxtTopic, TxtOpnion, BackButton, UserImageContainer, InteressesContainer} from './styles';
+import { Container, ButtonContainer, Button, TxtButton, BackButton} from './styles';
 import Swiper from 'react-native-deck-swiper';
-import data from '../../data'
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { showMessage, hideMessage } from "react-native-flash-message";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Card from './Card'
 
-const DebaterOuPularPage = () => {
-  const navigation = useNavigation();
-  const [index, setIndex] = React.useState(0);
-  const onSwiped = () => {
-    setIndex((index + 1) % data.length);
+const DebaterOuPularPage = (route) => {
+
+  if(typeof(route.route.params) !== 'undefined' || route.route.params != null){
+    
+      showMessage({
+        message: "Solicitação de debate enviada para Thiago!",
+        type: "info",
+      })
   }
+
+  const navigation = useNavigation();
   return (
     <>
       <View>
         <Header title="Debates Privados" />
       </View>
-
-      <Container style={{ flex: 1}}>
-        
-        <Card style={{ paddingHorizontal: 20,flex:1}}>
-
-          <UserImageContainer>
-            <UserImage source={require('../../../../../assets/foto-default.png')} />
-            <TxtName>Thiago André</TxtName>
-          </UserImageContainer>
-
-          <VisaoContainer>
-            <Border>
-              <TxtTopic>Texto Resumitivo</TxtTopic>
-              <TxtOpnion>Lorem Ipsum is simply dummy text asda ad aa  asdasd asdas Lorem Ipsum is simply Lorem Ipsum is simply dummy text asda ad aa  asdasd asdas Lorem Ipsum is simply Lorem Ipsum is simply  is simply  </TxtOpnion>
-            </Border>
-          </VisaoContainer>
-
-          <InteressesContainer>
-            <TxtTopic>Temas de interesse</TxtTopic>
-            <InteressesList />
-          </InteressesContainer>
-
-          <View style={{ justifyContent: 'center', flex: 1 }}>
-            <CoordenadasImage style={{ resizeMode: 'contain' }} source={require('../../../../../assets/coordenadas.jpg')} />
-          </View>
-          
-        </Card> 
-      
+      <Container style={{ flex: 1,marginTop:5}}>
+        <Card />
       </Container>
 
       <ButtonContainer>
 
-
+      <Button  onPress={() => {
+          
+        }}>
+          <TxtButton>Pular</TxtButton>
+        </Button>
 
         <BackButton>
-
+        <Icon name="undo" size={30} color="gray" />
         </BackButton>
         <Button onPress={() => { navigation.navigate('EscolherTemaDebate') }}>
           <TxtButton>Debater</TxtButton>
         </Button>
       </ButtonContainer>
+
     </>
   )
 }

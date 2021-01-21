@@ -8,10 +8,6 @@ export const Container = styled.View`
     padding:0 15px;
 `;
 
-export const CardWrapper = styled.View`
-    margin: 15px 0 0 0;
-    height:${`${screenHeight * 0.75}px`}; 
-`
 
 export const UserImageContainer = styled.View`
     align-items:center;
@@ -55,7 +51,6 @@ export const Border = styled.View`
 export const InteressesContainer = styled.View`
     justify-content:center;
     flex:1;
-    margin-top:${`${hp('1%')}px`};
 `
 
 export const CoordenadasImage = styled.Image`
@@ -68,7 +63,7 @@ export const CoordenadasImage = styled.Image`
 export const ButtonContainer = styled.View`
     flex-direction:row;
     justify-content:center;
-    height:${`${hp('8.2%')}px`};
+    height:${`${hp('8%')}px`};
     align-items:center;
     padding:0 15px;
 `
@@ -94,8 +89,12 @@ export const BackButton = styled.TouchableOpacity`
     height:${`${hp('6.2%')}px`};
     border-color:#e6e6e1;
     border-width:1px;
-    background-color:white
+    background-color:white;
+    justify-content:center;
+    align-items:center;
 `
+
+
 
 
 

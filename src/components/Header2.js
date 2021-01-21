@@ -9,7 +9,7 @@ export default props => {
   return <View style={styles.header}>
   <View style={styles.headerInner}>
     <TouchableOpacity onPress={()=>{navigation.navigate("MeuPerfil")}}>
-    <Image source={require('../../assets/foto-default.png')} style={styles.userImage} />
+    <Image source={require('../../assets/users/foto-default.png')} style={styles.userImage} />
     </TouchableOpacity>
     <Text style={styles.inicioTxt}>{props.title}</Text>
   </View>
@@ -18,9 +18,9 @@ export default props => {
 
 const styles = StyleSheet.create({
     header: {
-        paddingVertical:hp('1.2%'),
+      height:hp('6.8%'),
+      justifyContent:'center',
         backgroundColor: '#7c99e2',
-        marginBottom: 5,
         paddingLeft:wp('3%'),
       },
       headerInner: {
@@ -38,6 +38,5 @@ const styles = StyleSheet.create({
         width:hp('4.7%'),
         height:hp('4.7%'),
         borderRadius:hp('2.45%'),
-
       }
 })

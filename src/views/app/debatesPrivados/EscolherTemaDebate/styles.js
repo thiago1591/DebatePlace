@@ -15,15 +15,18 @@ export const UserImageContainer = styled.View`
 `
 
 export const UserImage = styled.Image`
-
+height: ${`${hp('11.5%')}px`};
+    width: ${`${hp('11.5%')}px`};
+    border-radius: ${`${hp('5.25%')}px`};
 `
 
 export const Input = styled.TextInput`
-    height:40px;
-    width:${`${wp('75%')}px`};;
-    border-bottom-color:gray;
-    border-bottom-width:1px;
-    margin-bottom: ${`${hp('4%')}px`};
+   margin:${`${hp('2.5%')}px`} 0;
+   font-size:${`${hp('2%')}px`};
+   text-align:center; 
+   border-width:1px;
+   border-color:#ccc4c4;
+   border-radius:10px;
 `
 
 export const TxtName = styled.Text`
@@ -45,7 +48,8 @@ export const Button = styled.TouchableOpacity`
     width:100%;
     height:${`${hp('6%')}px`};
     background-color:#7c99e2;
-    justify-content:center
+    justify-content:center;
+    border-radius:2px;
 `
 
 export const TxtButton = styled.Text`
