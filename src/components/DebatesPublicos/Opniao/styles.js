@@ -17,6 +17,6 @@ export const Title = styled.Text`
 
 export const Message = styled.Text`
     font-size:14px;
-    color:#4c4f4e;
+    color:#2c2e2d;
     margin-bottom:5px
 `

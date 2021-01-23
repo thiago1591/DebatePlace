@@ -8,7 +8,7 @@ export const Container = styled.ScrollView`
 `;
 
 export const Label = styled.Text`
-    color: #8fa7b3;
+    color: gray;
     font-family: Nunito_600SemiBold;
     margin-bottom: 8px;
 `
@@ -16,7 +16,7 @@ export const Label = styled.Text`
 export const Input = styled.TextInput`
 border-width:1.2px;
   border-color: #d3e2e6;
-  border-radius:10px;
+  border-radius:5px;
   height:56px;
   padding: 18px 24px;
   margin-bottom:16px;
@@ -26,7 +26,7 @@ export const AddImageButton = styled.TouchableOpacity`
     border-style:dashed;
     border-color:#96D2F0;
     border-width:1.4px;
-    border-radius:10px;
+    border-radius:5px;
     height:56px;
     justify-content:center;
     align-items:center;

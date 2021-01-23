@@ -5,32 +5,6 @@ export const Container = styled.View`
 `;
 
 
-
-export const UserInfoContainer = styled.View`
-    flex-direction:row;
-`
-export const UserName = styled.Text`
-    margin-left:10px;
-    align-self: center;
-    font-family:sans-serif-medium;
-`
-export const Title = styled.Text`
-    margin:10px 0;
-    text-align:center;
-    font-size:18px;
-    font-family:sans-serif-medium;
-`
-
-export const Message = styled.Text`
-    font-size:14px;
-    color:#4c4f4e;
-    margin-bottom:5px
-`
-
-export const AnswerContainer = styled.View`
-
-`
-
 export const ActionContainer = styled.View`
     flex-direction:row;
     justify-content:space-between;
@@ -48,5 +22,22 @@ export const Button = styled.TouchableOpacity`
 export const TxtButton = styled.Text`
     text-align:center;
     margin-left:${props => `${props.margin}px`};
+    color:gray
+`
+
+export const InfosContainer = styled.View`
+ flex-direction:row;
+ align-items:center;
+ justify-content:flex-end
+`
+export const InfoContainer = styled.View`
+ flex-direction:row;
+ margin-left:5px;
+ margin: 10px 0;
+ align-self: flex-start;
+`
+
+export const TextInfo = styled.Text`
+    margin-left:4px;
     color:gray
 `

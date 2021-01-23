@@ -1,5 +1,8 @@
+import Icon from 'react-native-vector-icons/MaterialIcons'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {createStackNavigator} from '@react-navigation/stack'
+
 import React from 'react'; 
-import {createStackNavigator,HeaderBackButton} from '@react-navigation/stack'
 import Welcome from '../views/Welcome'
 import Avisos from '../views/Avisos'
 import Login from '../views/Login'
@@ -18,13 +21,14 @@ import ExplicacaoEixos from '../views/testeCoordenadas/ExplicacaoEixos'
 import EscolherCoordendas from  '../views/testeCoordenadas/EscolherCoordendas'
 import DebateInfosScreen from  '../views/app/debatesPrivados/Chat/DebateInfosScreen'
 import ChatScreen from  '../views/app/debatesPrivados/Chat/ChatScreen'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import Teste from '../views/app/Teste'
 import AddNovoDebate from '../views/app/debatesPublicos/AddNovoDebate'
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import PaginaDebate from '../views/app/debatesPublicos/PaginaDebate'
+import Responder from '../views/app/debatesPublicos/PaginaDebate/Responder/responder'
+import RespostasDeUmaResposta from '../views/app/debatesPublicos/PaginaDebate/Responder/respostasDeUmaResposta'
+import ResponderResposta from '../views/app/debatesPublicos/PaginaDebate/Responder/responderResposta'
 
 const Stack = createStackNavigator()
-const DebatePublicoStack = createStackNavigator();
+const BottomStack = createStackNavigator();
 
 function headerStyle(title) {
   return  {
@@ -37,22 +41,22 @@ title:'Drogas deveriam ser legalizadas?',headerTitleStyle:{fontSize:18,color:'wh
 
 function BottomTabStack() {
   return (
-    <DebatePublicoStack.Navigator initialRouteName="BottomTab">
-      <DebatePublicoStack.Screen name="BottomTab" component={BottomTab} options={{headerShown:false}}/>
-      <DebatePublicoStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
-      <DebatePublicoStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
-      <DebatePublicoStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
-      <DebatePublicoStack.Screen name="EscolherTemaDebate" component={EscolherTemaDebate}
-       options={headerStyle('Escolher tema')}/>
-      <DebatePublicoStack.Screen name="OutrosPerfis" component={OutrosPerfis} options={{headerShown:false}}/>
-      <DebatePublicoStack.Screen name="DebateInfosScreen" component={DebateInfosScreen} options={headerStyle('Informações debate')}/>
-      <DebatePublicoStack.Screen name="ChatScreen" component={ChatScreen}
-       options={headerStyle2} 
-       />
-      <DebatePublicoStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={headerStyle('Meus debates criados')}/>
-      <DebatePublicoStack.Screen name="Teste" component={Teste}/>
-      <DebatePublicoStack.Screen name="AddNovoDebate" component={AddNovoDebate} options={headerStyle('Criar um debate')} />
-    </DebatePublicoStack.Navigator>
+    <BottomStack.Navigator initialRouteName="BottomTab">
+      <BottomStack.Screen name="BottomTab" component={BottomTab} options={{headerShown:false}}/>
+      <BottomStack.Screen name="MeuPerfil" component={MeuPerfil} options={{headerShown:false}}/>
+      <BottomStack.Screen name="intrucoesTeste" component={intrucoesTeste} options={{headerShown:false}}/>
+      <BottomStack.Screen name="TesteView" component={TesteView} options={{headerShown:false}}/>
+      <BottomStack.Screen name="EscolherTemaDebate" component={EscolherTemaDebate} options={headerStyle('Escolher tema')}/>
+      <BottomStack.Screen name="OutrosPerfis" component={OutrosPerfis} options={{headerShown:false}}/>
+      <BottomStack.Screen name="DebateInfosScreen" component={DebateInfosScreen} options={headerStyle('Informações debate')}/>
+      <BottomStack.Screen name="ChatScreen" component={ChatScreen}options={headerStyle2}/>
+      <BottomStack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={headerStyle('Meus debates criados')}/>
+      <BottomStack.Screen name="AddNovoDebate" component={AddNovoDebate} options={headerStyle('Criar um debate')} />
+      <BottomStack.Screen name="PaginaDebate" component={PaginaDebate} options={headerStyle('')} />
+      <BottomStack.Screen name="Responder" component={Responder} options={headerStyle('Responder')} />
+      <BottomStack.Screen name="ResponderResposta" component={ResponderResposta} options={headerStyle('ResponderResposta')} />
+      <BottomStack.Screen name="RespostasDeUmaResposta" component={RespostasDeUmaResposta} options={headerStyle('')} />
+    </BottomStack.Navigator>
   );
 }
 

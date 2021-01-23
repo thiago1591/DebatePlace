@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import ComponenteDebate from '../../../../components/DebatesTimeline'
-import ComponenteDebate2 from '../../../../components/ComponenteDebatesPublicos2'
+import ComponenteDebate from '../../../../components/DebatesPublicos/DebatesTimeline';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../../../components/Header2'
 
@@ -15,7 +14,6 @@ const Timeline = () => {
     <Container>
       <ComponenteDebate />
       <ComponenteDebate />
-      <ComponenteDebate2 />
       <ComponenteDebate />
     </Container>
 

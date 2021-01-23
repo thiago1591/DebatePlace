@@ -12,7 +12,7 @@ const AddDebateTxt = () => {
       <Input
       />
 
-      <Label >Escreva sua visão sobre o tema</Label>
+      <Label >Inicie a discussão sobre o tema</Label>
       <Input
         style={ { height: 150, textAlignVertical: 'top' }}
         multiline
