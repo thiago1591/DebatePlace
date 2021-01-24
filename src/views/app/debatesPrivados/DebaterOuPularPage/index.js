@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View} from 'react-native'
-import Header from '../../../../components/Header2'
+import Header from '../../../../components/Header'
 import { useNavigation } from '@react-navigation/native';
 import { Container, ButtonContainer, Button, TxtButton, BackButton} from './styles';
 import Swiper from 'react-native-deck-swiper';

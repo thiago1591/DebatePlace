@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DebatesPrivados from '../views/app/debatesPrivados/DebaterOuPularPage'
 import DebatesPublicos from '../views/app/debatesPublicos/Timeline'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Header from './HeaderHome'
+import Header from './Home/HeaderHome'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const Tab = createBottomTabNavigator();

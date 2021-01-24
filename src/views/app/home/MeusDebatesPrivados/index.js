@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList } from 'react-native';
-import ChatListItem from '../../../../components/ComponenteMeusDebatesPrivados'
+import ChatListItem from '../../../../components/Home/ListaChatItem'
 import { Container } from './styles';
 
 const MeusDebatesPrivados = () => {

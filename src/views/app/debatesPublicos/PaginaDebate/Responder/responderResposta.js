@@ -3,7 +3,7 @@ import {Text} from 'react-native'
 import { Container,TitleContainer,Title,Input } from './styles';
 import { useNavigation } from '@react-navigation/native';
 import {Card} from 'react-native-paper'
-import Respostas from '../../../../../components/DebatesPublicos/Opniao/resposta'
+import Respostas from '../../../../../components/DebatesPublicos/resposta'
 
 const PaginaDebate = () => {
     

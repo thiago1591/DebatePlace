@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import OpniaoAutor from '../../../../components/DebatesPublicos/Opniao/opniaoAutor'
+import OpniaoAutor from '../../../../components/DebatesPublicos/opniaoAutor'
 import Respostas from './components/respostas'
 import { useNavigation } from '@react-navigation/native';
 

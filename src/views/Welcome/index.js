@@ -17,14 +17,14 @@ const Welcome = () => {
 
             <BotaoView>
                 <Button
-                    onPress={() => navigation.navigate('Avisos')}>
+                    onPress={() => navigation.navigate('EditarPerfil')}>
                         <Icon source={require('../../../assets/googleIcon.png')} />
-                        <TxtButton>Entrar com o Google</TxtButton>
+                        <TxtButton>Cadastrar com o Google</TxtButton>
                     </Button>
                     <Button
-                    onPress={() => navigation.navigate('Avisos')}>
-                        <Icon resizeMode='contain' source={require('../../../assets/emailIcon5.png')} />
-                        <TxtButton>Entrar com o Email</TxtButton>
+                    onPress={() => navigation.navigate('EditarPerfil')}>
+                        <Icon resizeMode='contain' source={require('../../../assets/emailIcon.png')} />
+                        <TxtButton>Cadastrar com o Email</TxtButton>
                     </Button> 
                     <Text style={{color:'white',alignSelf:'center',fontSize:16,marginTop:5}}>Já tem uma conta? <Text style={{fontWeight:'bold'}}>Entre</Text></Text>
             </BotaoView>

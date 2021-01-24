@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react';
-import { ScrollView, Text, View, StyleSheet, Switch, TextInput, TouchableOpacity } from 'react-native';
-import { Container, Label, Input, InputMessage, InputTitle, Button, TxtButton, AddImageButton } from './styles';
+import React, { useState} from 'react';
+import { ScrollView} from 'react-native';
+import { Container, Label, Input,Button, TxtButton, AddImageButton } from './styles';
 import Feather from 'react-native-vector-icons/dist/Feather';
 
 

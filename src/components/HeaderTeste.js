@@ -4,26 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-export const headerRight = () => {
-  switch(props.page){
-    case 'debatesPublicos' : 
-    return (<View style={styles.iconContainer}>
-    <Icon name="notifications" color="white" size={28} />
-    <Icon style={{marginLeft:15}} name="search" color="white" size={28} />
-  </View>)
-
-  case 'home' :
-    return
-
-  case 'debatesPrivados':
-    return <View style={styles.iconContainer}>
-    <Icon name="notifications" color="white" size={28} />
-    <Icon style={{marginLeft:15}} name="filter-alt" color="white" size={28} />
-  </View>
-  }
-}
-
-
 
 export default props => {
   const navigation = useNavigation();
@@ -35,14 +15,7 @@ export default props => {
     </TouchableOpacity>
     <Text style={styles.inicioTxt}>{props.title}</Text>
   </View> 
-
-
-  <View style={styles.iconContainer}>
-    <TouchableOpacity  onPress={()=>{navigation.navigate("Notificacoes")}}>
-      <Icon name="notifications" color="white" size={28} />
-    </TouchableOpacity>
-    <Icon style={{marginLeft:15}} name="filter-alt" color="white" size={28} />
-  </View>
+  
 </View>
 }
 

@@ -1,0 +1,143 @@
+[33mcommit 8ab75d100744ba8e5eff1221ec19e89179a04ef9[m[33m ([m[1;36mHEAD -> [m[1;32mfeature[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: thiago1590 <thiagoandre2121@gmail.com>
+Date:   Sat Jan 23 16:01:42 2021 -0300
+
+    front paginas debates publicos terminadas
+
+[33mcommit 91512fae49ffd47d9d7f824224be5818c7e7b51f[m
+Author: thiago1590 <thiagoandre2121@gmail.com>
+Date:   Fri Jan 22 18:34:54 2021 -0300
+
+    front pagina criar debate finalizada e botoes de açoes incluidos na timeline
+
+[33mcommit 9965883990184afc5aafcfd9d869fe782a58c7ca[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Thu Jan 21 14:14:42 2021 -0300
+
+    paginas debate privado terminadas
+
+[33mcommit 4aeb8697f333edce082b70e1f52d2c67ab575475[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Mon Jan 18 17:34:16 2021 -0300
+
+    pagina escolher tema
+
+[33mcommit ea560bcaaf0207d7ef858f942702e954a0e009fe[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Mon Jan 18 02:21:05 2021 -0300
+
+    ChatScreen
+
+[33mcommit c596769419439fe17077b57ad83940afa20e1db9[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Sun Jan 17 15:09:43 2021 -0300
+
+    front paginas testeCoordenadas, pagina escolherTemaDebate,outrosPerfis,Login
+
+[33mcommit 3a32df48e0e70627413b4102169e87e8634e993f[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Fri Jan 15 01:24:03 2021 -0300
+
+    correcoes responsividade
+
+[33mcommit 82b612beb22ec4c77159d1f2e8bbc50229348095[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Wed Jan 13 18:46:51 2021 -0300
+
+    mudança bottomTab e Stack
+
+[33mcommit 64212a485a8b799922f2ef5d2df864252674c67b[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Wed Jan 13 16:00:27 2021 -0300
+
+    melhorias de codigo terminadas
+
+[33mcommit 7e165d57c6774b803819e3db524be9212434de3f[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Wed Jan 13 00:32:17 2021 -0300
+
+    styled components aplicado no home
+
+[33mcommit 420c84240024eaddd7f408d22a044714bb0f6a0c[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Tue Jan 12 19:32:00 2021 -0300
+
+    aplicando styled-components nas primeiras paginas, limpando e melhorando codigo
+
+[33mcommit 5e2b5802cd849a28a0595180017d082db2aa34ad[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Tue Jan 12 02:51:48 2021 -0300
+
+    mudança pagina meus debates criados
+
+[33mcommit 5339acab2cf24577f8847b0b2a533e3fedbf0cef[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Mon Jan 11 13:57:07 2021 -0300
+
+    botao debates criados adicionado na pagina Meu perfil
+
+[33mcommit 7d34369ffa119ad31e6685c0e1fd1622abc1a744[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Sat Jan 9 00:55:02 2021 -0300
+
+    front das paginas do teste de coordenadas
+
+[33mcommit 2685f6aa9280eff27d07278a2f3cad157feee6d1[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Thu Jan 7 02:11:49 2021 -0300
+
+    melhorias na estrutura da navegação e pagina meu perfil
+
+[33mcommit e4d189a2c4f5a0bdd8f42a1cf1fe2ab1b57624aa[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Sat Dec 26 13:28:14 2020 -0300
+
+    começando debatesPrivados
+
+[33mcommit 5b0450c10afed206a3915260ce75af5ed88f8f34[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Mon Dec 21 18:06:04 2020 -0300
+
+    primeira versão debates publicos
+
+[33mcommit 2ab9ec05d38abf00a48f891dd45029bb9d00f914[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Mon Dec 21 14:47:33 2020 -0300
+
+    primeira versão da home finalizada
+
+[33mcommit 6b55baf517179d324ce635512a733ad1ca9db74c[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Fri Dec 18 03:23:01 2020 -0300
+
+    Componente ChatListItem feito
+
+[33mcommit b480fefa6f5550b05d13eda29d233b016230d03d[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Fri Dec 18 01:12:56 2020 -0300
+
+    navigation implement
+
+[33mcommit 58ee9857fea9b8c9e527d9675ae1bce020d90970[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Fri Dec 18 00:29:32 2020 -0300
+
+    pre install top-navigation
+
+[33mcommit 44d2bfa4b25853714f517ddd720f86928cd2a8bd[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Thu Dec 17 01:58:31 2020 -0300
+
+    HeaderTab Home
+
+[33mcommit 3d7be898d9e73d7176c6d05c0fd30fae27de3b82[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Wed Dec 16 01:58:49 2020 -0300
+
+    ahome
+
+[33mcommit e4ab7e1693d110f62b92a6099332cf1a5cf12a24[m
+Author: thiago <thiagoandre2121@gmail.com>
+Date:   Tue Dec 15 23:28:32 2020 -0300
+
+    primeiras paginas

@@ -2,7 +2,7 @@ import React from 'react';
 import { View,TextInput } from 'react-native';
 import {Card} from 'react-native-paper'
 import {TxtResponder,Responder} from '../styles'
-import Respostas from '../../../../../components/DebatesPublicos/Opniao/resposta'
+import Respostas from '../../../../../components/DebatesPublicos/resposta'
 import { useNavigation } from '@react-navigation/native';
 
 const PaginaDebate = () => {

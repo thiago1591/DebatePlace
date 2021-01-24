@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import ComponenteDebate from '../../../../components/DebatesPublicos/DebatesTimeline';
+import ComponenteDebate from './components';
 import { useNavigation } from '@react-navigation/native';
-import Header from '../../../../components/Header2'
+import Header from '../../../../components/Header'
 
 import { Container,BtnAdd,TxtBtn } from './styles';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View,Text } from 'react-native';
-import Respostas from '../../../../../components/DebatesPublicos/Opniao/resposta'
+import Respostas from '../../../../../components/DebatesPublicos/resposta'
 import { CardComponent,InfoContainer,TxtRespostaNumero } from '../styles';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native'

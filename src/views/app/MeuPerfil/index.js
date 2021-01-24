@@ -60,7 +60,7 @@ const MeuPerfil = () => {
             </Conteudo>
 
             <ButtonsContainer>
-                <Button onPress={() => { navigation.navigate("TesteView") }}>
+                <Button onPress={() => { navigation.navigate("PaginaTeste") }}>
                     <TxtButton>refazer teste</TxtButton>
                 </Button>
 
