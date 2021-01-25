@@ -23,6 +23,7 @@ import Notificacoes from '../views/app/Notificacoes'
 import Responder from '../views/app/debatesPublicos/PaginaDebate/Responder/responder'
 import RespostasDeUmaResposta from '../views/app/debatesPublicos/PaginaDebate/Responder/respostasDeUmaResposta'
 import ResponderResposta from '../views/app/debatesPublicos/PaginaDebate/Responder/responderResposta'
+import Testando from '../views/Teste'
 
 import { headerRight } from '../components/Header';
 
@@ -50,16 +51,17 @@ const EditProfileHeaderStyle = {
 
 export default props => {
   return <Stack.Navigator initialRouteName="BottomTab">
-    <Stack.Screen name="Welcome" component={Welcome} />
-    <Stack.Screen name="ExplicacaoEixos" component={ExplicacaoEixos} />
-    <Stack.Screen name="EscolherCoordenadas" component={EscolherCoordenadas} />
-    <Stack.Screen name="EscolherInteresses" component={EscolherInteresses} />
-    <Stack.Screen name="BottomTab" component={BottomTab} options={{ headerShown: false }} />
-    <Stack.Screen name="MeuPerfil" component={MeuPerfil} options={{ headerShown: false }} />
+    <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
+    <Stack.Screen name="EditarPerfil" component={EditarPerfil} options={{ headerShown: false }} />
+    <Stack.Screen name="EscolherInteresses" component={EscolherInteresses} options={{ headerShown: false }}/>
     <Stack.Screen name="IntrucoesTeste" component={IntrucoesTeste} options={{ headerShown: false }} />
     <Stack.Screen name="PaginaTeste" component={PaginaTeste} options={{ headerShown: false }} />
-    <Stack.Screen name="EscolherTemaDebate" component={EscolherTemaDebate} options={headerStyle('Escolher tema')} />
+    <Stack.Screen name="EscolherCoordenadas" component={EscolherCoordenadas} options={{ headerShown: false }}/>
+    <Stack.Screen name="ExplicacaoEixos" component={ExplicacaoEixos} options={{ headerShown: false }}/>
+    <Stack.Screen name="BottomTab" component={BottomTab} options={{ headerShown: false }} />
+    <Stack.Screen name="MeuPerfil" component={MeuPerfil} options={{ headerShown: false }} />
     <Stack.Screen name="OutrosPerfis" component={OutrosPerfis} options={{ headerShown: false }} />
+    <Stack.Screen name="EscolherTemaDebate" component={EscolherTemaDebate} options={headerStyle('Escolher tema')} />
     <Stack.Screen name="DebateInfosScreen" component={DebateInfosScreen} options={headerStyle('Informações debate')} />
     <Stack.Screen name="ChatScreen" component={ChatScreen} options={chatHeaderStyle} />
     <Stack.Screen name="MeusDebatesCriados" component={MeusDebatesCriados} options={headerStyle('Meus debates criados')} />
@@ -69,6 +71,7 @@ export default props => {
     <Stack.Screen name="Responder" component={Responder} options={headerStyle('Responder')} />
     <Stack.Screen name="ResponderResposta" component={ResponderResposta} options={headerStyle('Responder')} />
     <Stack.Screen name="RespostasDeUmaResposta" component={RespostasDeUmaResposta} options={headerStyle('')} />
-    <Stack.Screen name="EditarPerfil" component={EditarPerfil} options={{ headerShown: false }} />
+    <Stack.Screen name="Testando" component={Testando} options={headerStyle('')} options={{ headerShown: false }} />
+    
   </Stack.Navigator>;
 }

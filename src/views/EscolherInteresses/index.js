@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity,Button } from 'reac
 import Interesse from './component';
 import { useNavigation } from '@react-navigation/native';
 import BtnPrincipal from '../../components/BtnPrincipal'
-
+import Row from './component/index'
 
 const Interesses = () => {
     const navigation = useNavigation();
