@@ -1,12 +1,25 @@
-import React from 'react';
-import { View, Text, ScrollView, } from 'react-native';
-import { Card } from 'react-native-paper';
-import UserAvatar from "@muhzi/react-native-user-avatar";
-import { Container, UserName, MessageContainer, TxtMessage, TxtContainer, MessageContainer2, UserName2, TxtContainer2, TxtMessage2,SendMessageContainer,InputContainer,SendButton,Input } from './styles';
+import React,{useEffect} from 'react'
+import { View, Text, ScrollView, } from 'react-native'
+import UserAvatar from "@muhzi/react-native-user-avatar"
+import { Container, UserName, MessageContainer, TxtMessage, TxtContainer, MessageContainer2, UserName2, TxtContainer2, TxtMessage2,SendMessageContainer,InputContainer,SendButton,Input } from './styles'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import IO from 'socket.io-client'
+import api from '../../../../../services/api'
 
-const ChatScreen = () => {
-    return <>
+
+
+const Teste = () => {
+    var socket = IO('http://192.168.0.15:3333')
+    const messageObject = {autor:'thiago',message:'olá mundo teste'}
+    const onClick = () => async () => {
+        socket.emit('sendMessage', 'messageObject')
+    }
+
+    useEffect(()=>{
+        socket.emit('sendMessage', messageObject)
+    },[])
+
+  return ( <>
     <Container>
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={{paddingTop:10}}></View>
@@ -81,13 +94,14 @@ const ChatScreen = () => {
                 <Input />
             </InputContainer>
 
-            <SendButton>
+            <SendButton onPress={onClick}>
             <Icon name="send" size={28} color="white" />
             </SendButton>
         </SendMessageContainer>
       
     </Container>
     </>
+  )
 }
 
-export default ChatScreen;
+export default Teste

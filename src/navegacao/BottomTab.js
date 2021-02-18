@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 export default function BottomTab() {
   return (
     <Tab.Navigator 
-    initialRouteName="DebatesPublicos"
+    initialRouteName="Header"
     screenOptions={({route}) => ({
       tabBarIcon: ({color,size}) => {
         let iconName

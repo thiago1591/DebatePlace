@@ -1,6 +1,7 @@
-import { Entity, Column, PrimaryGeneratedColumn} from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne} from "typeorm";
+import Usuario from './Usuario'
 
-@Entity('debate_publico')
+@Entity('Debate_Publico')
 export default class DebatePublico {
     @PrimaryGeneratedColumn('increment')
     id : number;
@@ -9,9 +10,13 @@ export default class DebatePublico {
     titulo: string;
 
     @Column()
-    mensagem_autor: string;
+    autor_id: number;
 
     @Column()
-    imagem: string;
+    mensagem: string;
+
+    @Column()
+    data: string;
+
 }
 

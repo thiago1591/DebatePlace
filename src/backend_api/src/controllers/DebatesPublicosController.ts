@@ -5,7 +5,8 @@ import DebatePublico from '../models/DebatePublico'
 export default {
     async index(req:Request,res:Response){
         const debatePublicoRepository = getRepository(DebatePublico)
-        const debatesPublicos = await debatePublicoRepository.find()
+        const debatesPublicos = await debatePublicoRepository.query(`select u.id,u.imagem,u.nome,d.id,d.titulo,d.mensagem from "Debate_Publico" as d 
+        left join "Usuario" as u on d.autor_id = u.id`)
         return res.json(debatesPublicos)
     },
 
@@ -20,16 +21,18 @@ export default {
         try{
             const {
                 titulo,
-                mensagem_autor,
-                imagem
+                autor_id,
+                mensagem,
+                data
             } = req.body
         
             const debatePublicoRepository = getRepository(DebatePublico)
         
             const debatePublico = debatePublicoRepository.create({
                 titulo,
-                mensagem_autor,
-                imagem
+                autor_id,
+                mensagem,
+                data
             })
         
             await debatePublicoRepository.save(debatePublico)

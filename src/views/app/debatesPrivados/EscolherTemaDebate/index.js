@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import { View,ScrollView,TextInput} from 'react-native';
 import InteressesList from '../../../../components/InteressesList'
-import { Card } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
 import { Container, UserImage, TxtTopic, TxtName, UserImageContainer,InteressesContainer,Input,Button,TxtButton} from './styles';

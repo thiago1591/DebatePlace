@@ -8,7 +8,7 @@ export default props => {
     const navigation = useNavigation();
     let menssagem = "Menssagem de teste opa opa opa"
     return (
-        <TouchableOpacity activeOpacity={0.5} onPress={()=>{navigation.navigate('ChatScreen')}}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => { navigation.navigate('ChatScreen') }}>
             <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Legalização da Maconha</Text>
 
             <View style={styles.container}>
@@ -39,37 +39,37 @@ export default props => {
                 </View>
 
             </View>
-         </TouchableOpacity>                           
+        </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
-                container: {
-                marginVertical: 10,
+    container: {
+        marginVertical: 10,
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
     },
     containerLeft: {
-                flexDirection: 'row',
-        flex:1,
+        flexDirection: 'row',
+        flex: 1,
     },
     midContainer: {
-                justifyContent: 'space-around',
+        justifyContent: 'space-around',
         marginLeft: 10,
-        paddingBottom:10
+        paddingBottom: 10
     },
     username: {
-                fontSize: 16
+        fontSize: 16
     },
     lastMessage: {
-                fontSize: 14,
+        fontSize: 14,
         color: 'gray',
     },
     time: {
-                fontSize: 13,
+        fontSize: 13,
         color: 'gray',
         textAlign: 'right',
-        flex:1,
+        flex: 1,
     }
 })

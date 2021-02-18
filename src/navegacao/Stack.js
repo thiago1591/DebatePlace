@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { createStackNavigator } from '@react-navigation/stack'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 import Welcome from '../views/Welcome'
 import EditarPerfil from '../views/app/EditarPerfil'
@@ -25,6 +26,7 @@ import RespostasDeUmaResposta from '../views/app/debatesPublicos/PaginaDebate/Re
 import ResponderResposta from '../views/app/debatesPublicos/PaginaDebate/Responder/responderResposta'
 import Testando from '../views/Teste'
 
+
 import { headerRight } from '../components/Header';
 
 const Stack = createStackNavigator()
@@ -38,8 +40,9 @@ function headerStyle(title) {
 
 const chatHeaderStyle = {
   headerRight: () => (
-    <TouchableOpacity>
-      <Text> style={{ marginRight: 10 }} </Text> </TouchableOpacity>),
+    <TouchableOpacity style={{marginRight:15}}>
+      <Icon name="ellipsis-v" size={20} color="white"/>
+    </TouchableOpacity>),
   title: 'Drogas deveriam ser legalizadas?', headerTitleStyle: { fontSize: 18, color: 'white', marginLeft: 15 }, headerStyle: { height: 50, backgroundColor: '#7c99e2' }
 }
 
