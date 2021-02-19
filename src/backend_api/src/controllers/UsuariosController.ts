@@ -33,5 +33,16 @@ export default {
         } catch (err) {
             console.log('erro: --> ', err.message)
         }
+    },
+    async show(req:Request,res:Response){
+        const {id} = req.params
+        const usuarioRepository = getRepository(Usuario)
+        const usuario = await usuarioRepository.findOneOrFail(id)
+        return res.json(usuario)
+    },
+    async index(req:Request,res:Response){
+        const usuarioRepository = getRepository(Usuario)
+        const usuarios = await usuarioRepository.find()
+        return res.json(usuarios)
     }
 }

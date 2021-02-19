@@ -1,12 +1,32 @@
 import {Request,Response} from 'express'
 import {getRepository} from 'typeorm'
 import DebatePublico from '../models/DebatePublico'
+import Respostas from '../models/Resposta'
 
 export default {
     async index(req:Request,res:Response){
         const debatePublicoRepository = getRepository(DebatePublico)
-        const debatesPublicos = await debatePublicoRepository.query(`select u.id,u.imagem,u.nome,d.id,d.titulo,d.mensagem from "Debate_Publico" as d 
-        left join "Usuario" as u on d.autor_id = u.id`)
+        const respostasRepository = getRepository(Respostas)
+        const respostasArray = []
+        const debatesPublicos = await 
+        debatePublicoRepository.query(`
+            SELECT u.id as id_user,u.imagem as imagem_user,u.nome as nome_user,d.id as id_debate,d.titulo as titulo_debate,d.mensagem as mensagem_debate 
+            FROM "Debate_Publico" d 
+            LEFT JOIN "Usuario" u ON d.autor_id = u.id`)
+        for (let i=0;i<debatesPublicos.length;i++){
+            const respostas = await respostasRepository.query(`
+            SELECT u.id as id_user_resposta ,u.nome as nome_user_resposta,u.imagem as imagem_user_resposta, r.mensagem as mensagem_resposta 
+            FROM "Resposta" r 
+            INNER JOIN "Usuario" u ON r.id_usuario = u.id 
+            WHERE id_debate = ${debatesPublicos[i].id_debate} 
+            ORDER BY data`)
+            let resposta = respostas[respostas.length - 1]
+            respostasArray.push(resposta)
+            debatesPublicos[i].id_user_resposta = respostasArray[i].id_user_resposta
+            debatesPublicos[i].nome_user_resposta = respostasArray[i].nome_user_resposta
+            debatesPublicos[i].imagem_user_resposta = respostasArray[i].imagem_user_resposta
+            debatesPublicos[i].mensagem_resposta = respostasArray[i].mensagem_resposta
+        }
         return res.json(debatesPublicos)
     },
 
