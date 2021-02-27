@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from './styles';
-import {FlatList} from 'react-native'
+import {View} from 'react-native'
 import ChatListItem from '../../../../components/Home/DebatePublicoItem'
 
+import api from '../../../../services/api'
+
 const MeusDebatesPublicos = () => {
-  const array = [1,2,3,4,5,6,7,8,9,10]
+  const [debatesSeguidos, setDebatesSeguidos] = useState([1])
+
+  useEffect(() => {
+    async function getData() {
+      await api.get('debates_seguidos/3').then(response => {
+        setDebatesSeguidos(response.data)
+      })
+    }
+    getData()
+  }, [])
+
   return (
     <Container>
-    <FlatList
-    showsVerticalScrollIndicator={false}
-     data={array}
-     renderItem={() => <ChatListItem />}
-     keyExtractor={(index) => index.toString()}
-     />
+    {debatesSeguidos.map((debate,key)=>{
+      return(
+      <View key={key}>
+        <ChatListItem debate={debate} />
+      </View>
+      )
+    })}
  </Container>
   )
 }

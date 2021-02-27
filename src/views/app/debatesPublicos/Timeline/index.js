@@ -1,28 +1,47 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React, { useState} from 'react';
+import { View, Text, StyleSheet, ScrollView} from 'react-native';
 import ComponenteDebate from './components';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,useFocusEffect } from '@react-navigation/native';
 import Header from '../../../../components/Header'
+import { Container, BtnAdd, TxtBtn } from './styles';
 
-import { Container,BtnAdd,TxtBtn } from './styles';
+import api from '../../../../services/api'
 
 const Timeline = () => {
-  const navigation = useNavigation();
-  return ( <>
-    <ScrollView>
-    <Header title="Debates Públicos" />
-    <Container>
-      <ComponenteDebate />
-      <ComponenteDebate />
-      <ComponenteDebate />
-    </Container>
+  const [debates,setDebates] = useState([0,0,0,0])
 
-  </ScrollView>
-  <BtnAdd onPress={()=>{navigation.navigate('AddNovoDebate')}}>
-  <TxtBtn>+</TxtBtn>
-  </BtnAdd>
-</>
+  useFocusEffect(() => {
+      async function getData() {
+        await api.get('debates_publicos').then(response => {
+          setDebates(response.data)
+        })
+      }
+      getData()
+    })
+
+  const navigation = useNavigation();
+
+  return (<>
+    <ScrollView>
+      <Header title="Debates Públicos" />
+      <Container>
+        {debates.map((debate,key) => {
+          return (
+            <View key={key}>   
+                <ComponenteDebate debate={debate} />
+            </View>
+          )
+        })}
+      </Container>
+
+    </ScrollView>
+    <BtnAdd onPress={() => { navigation.navigate('AddNovoDebate') }}>
+      <TxtBtn>+</TxtBtn>
+    </BtnAdd>
+  </>
   )
 }
+
+
 
 export default Timeline;

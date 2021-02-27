@@ -14,18 +14,26 @@ export default {
             FROM "Debate_Publico" d 
             LEFT JOIN "Usuario" u ON d.autor_id = u.id`)
         for (let i=0;i<debatesPublicos.length;i++){
+
+             const respostasLength = await respostasRepository.query(`SELECT id_debate FROM "Resposta" WHERE id_debate = ${debatesPublicos[i].id_debate}`)
+            if(respostasLength.length === 0){
+                
+            } else{
+
             const respostas = await respostasRepository.query(`
             SELECT u.id as id_user_resposta ,u.nome as nome_user_resposta,u.imagem as imagem_user_resposta, r.mensagem as mensagem_resposta 
             FROM "Resposta" r 
             INNER JOIN "Usuario" u ON r.id_usuario = u.id 
             WHERE id_debate = ${debatesPublicos[i].id_debate} 
             ORDER BY data`)
+
             let resposta = respostas[respostas.length - 1]
             respostasArray.push(resposta)
             debatesPublicos[i].id_user_resposta = respostasArray[i].id_user_resposta
             debatesPublicos[i].nome_user_resposta = respostasArray[i].nome_user_resposta
             debatesPublicos[i].imagem_user_resposta = respostasArray[i].imagem_user_resposta
             debatesPublicos[i].mensagem_resposta = respostasArray[i].mensagem_resposta
+            }
         }
         return res.json(debatesPublicos)
     },

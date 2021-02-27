@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   background-color:white;
   padding:24px;
   flex:1;
@@ -14,7 +14,7 @@ export const Label = styled.Text`
 `
 
 export const Input = styled.TextInput`
-border-width:1.2px;
+  border-width:1.2px;
   border-color: #d3e2e6;
   border-radius:5px;
   height:56px;

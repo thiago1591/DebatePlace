@@ -28,7 +28,8 @@ export class createDebatePublico1612800590426 implements MigrationInterface {
                 },
                 {
                     name:'data',
-                    type:'varchar'
+                    type:'timestamp',
+                    default:'now()'
                 }
             ]
         }))
