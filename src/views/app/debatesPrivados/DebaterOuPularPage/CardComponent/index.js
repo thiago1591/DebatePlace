@@ -18,7 +18,7 @@ const Cardcomponent = ({ user }) => {
         <VisaoContainer>
           <Border>
             <TxtTopic>Texto Resumitivo</TxtTopic>
-            <TxtOpnion> { user.texto_resumitivo } </TxtOpnion>
+            <TxtOpnion> { user.texto_resumitivo } lorem ipsum is a dommy text and im just writing anything just to see how it goes lololol lorem ipsum is a dommy text and im just blabla </TxtOpnion>
           </Border>
         </VisaoContainer>
 

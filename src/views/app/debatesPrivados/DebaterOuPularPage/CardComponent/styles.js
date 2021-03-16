@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import normalize from '../../../../../adjust'
 
 export const UserImageContainer = styled.View`
     align-items:center;
@@ -16,18 +17,18 @@ export const UserImage = styled.Image`
 `;
 
 export const TxtName = styled.Text`
-    font-size:${`${hp('2.5%')}px`};
+    font-size:${`${normalize(18)}px`};
     margin-top:3px;
     font-family:sans-serif-medium;
 `;
 
 export const TxtTopic = styled.Text`
-    font-size:${`${hp('2.1%')}px`};
+    font-size:${`${normalize(17)}px`};
     font-family:sans-serif-medium;
 `
 
 export const TxtOpnion = styled.Text`
-    font-size:${`${hp('2%')}px`};
+    font-size:${`${normalize(14)}px`};
 `
 
 export const VisaoContainer = styled.View`

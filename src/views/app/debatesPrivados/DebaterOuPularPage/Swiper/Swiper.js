@@ -105,7 +105,7 @@ class Swiper extends Component {
       top: hp('7.4%'),
       left: cardHorizontalMargin,
       width: cardWidth,
-      height: '84.6%'
+      height: '83.5%'
     }
   }
 

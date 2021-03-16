@@ -31,3 +31,4 @@ const MeusDebatesPublicos = () => {
 }
 
 export default MeusDebatesPublicos;
+

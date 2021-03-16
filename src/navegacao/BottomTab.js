@@ -28,7 +28,7 @@ export default function BottomTab() {
       }
     })}
     tabBarOptions={{
-      style:{height:hp('6.5%')},
+      style:{height:hp('7%')},
     activeTintColor:'#7c99e2',
     activeBackgroundColor: '#FFF',
     inactiveBackgroundColor: '#FFF',
