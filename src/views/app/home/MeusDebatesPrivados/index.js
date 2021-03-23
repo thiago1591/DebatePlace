@@ -6,7 +6,7 @@ import { Container } from './styles';
 const MeusDebatesPrivados = () => {
   const array = [1,2,3,4,5,6,7,8,9,10]
 
-  return (
+  return ( 
     <Container>
     <FlatList
     showsVerticalScrollIndicator={false}
@@ -15,6 +15,7 @@ const MeusDebatesPrivados = () => {
      keyExtractor={(index) => index.toString()}
      />
  </Container>
+
   )
 }
 

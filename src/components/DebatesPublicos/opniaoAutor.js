@@ -23,7 +23,7 @@ const TemaDebate = ({debate}) => {
                     autoRun={true}
                     visible={isLoad}>
                     <UserAvatar size={30} backgroundColor="#0be881"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg" />
+                        src={debate.imagem_user} />
                 </ShimmerPlaceHolder>
 
                 <ShimmerPlaceHolder

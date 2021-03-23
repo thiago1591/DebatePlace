@@ -11,14 +11,14 @@ const Cardcomponent = ({ user }) => {
       <Card style={{ paddingHorizontal: 20, flex: 1 }}>
         
         <UserImageContainer>
-          <UserImage source={require('../../../../../../assets/users/yuval.jpg')} />
+          <UserImage source={{uri:user.imagem}} />
           <TxtName>{user.nome}</TxtName>
         </UserImageContainer>
 
         <VisaoContainer>
           <Border>
             <TxtTopic>Texto Resumitivo</TxtTopic>
-            <TxtOpnion> { user.texto_resumitivo } lorem ipsum is a dommy text and im just writing anything just to see how it goes lololol lorem ipsum is a dommy text and im just blabla </TxtOpnion>
+            <TxtOpnion> { user.texto_resumitivo } </TxtOpnion>
           </Border>
         </VisaoContainer>
 
