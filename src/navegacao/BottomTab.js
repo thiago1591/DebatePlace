@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import DebatesPrivados from '../views/app/debatesPrivados/DebaterOuPularPage'
-import DebatesPublicos from '../views/app/debatesPublicos/Timeline'
+import DebatesPrivados from '../navegacao/headers/HeaderDebatesPrivados'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Header from './Home/HeaderHome'
+import Home from './headers/HeaderHome'
+import DebatesPublicos from './headers/HeaderDebatesPublicos'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const Tab = createBottomTabNavigator();
@@ -11,11 +11,11 @@ const Tab = createBottomTabNavigator();
 export default function BottomTab() {
   return (
     <Tab.Navigator 
-    initialRouteName="Header"
+    initialRouteName="HeaderDebatesPublicos"
     screenOptions={({route}) => ({
       tabBarIcon: ({color,size}) => {
         let iconName
-        if(route.name === 'Header') {
+        if(route.name === 'Home') {
           iconName = 'home'
         }
         else if(route.name === 'DebatesPrivados') {
@@ -36,7 +36,7 @@ export default function BottomTab() {
     showLabel:false,
     }}>
       <Tab.Screen name="DebatesPublicos" component={DebatesPublicos} />
-      <Tab.Screen name="Header" component={Header} />
+      <Tab.Screen name="Home" component={Home}/>
       <Tab.Screen name="DebatesPrivados" component={DebatesPrivados} />
     </Tab.Navigator>
   );

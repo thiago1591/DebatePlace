@@ -3,6 +3,8 @@ import { Text, TouchableOpacity } from 'react-native'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { createStackNavigator } from '@react-navigation/stack'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Header from '../components/Header'
 
 import Welcome from '../views/Welcome'
 import EditarPerfil from '../views/app/EditarPerfil'
@@ -53,7 +55,15 @@ const EditProfileHeaderStyle = {
 }
 
 export default props => {
-  return <Stack.Navigator initialRouteName="BottomTab">
+  return <Stack.Navigator initialRouteName="BottomTab" screenOptions={{
+    headerStyle: {
+        backgroundColor: '#7c99e2',
+        shadowOpacity:0,
+        elevation:0
+    },
+    headerTitleStyle: {
+        fontSize: 15
+    } }}>
     <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
     <Stack.Screen name="EditarPerfil" component={EditarPerfil} options={{ headerShown: false }} />
     <Stack.Screen name="EscolherInteresses" component={EscolherInteresses} options={{ headerShown: false }}/>
@@ -61,7 +71,7 @@ export default props => {
     <Stack.Screen name="PaginaTeste" component={PaginaTeste} options={{ headerShown: false }} />
     <Stack.Screen name="EscolherCoordenadas" component={EscolherCoordenadas} options={{ headerShown: false }}/>
     <Stack.Screen name="ExplicacaoEixos" component={ExplicacaoEixos} options={{ headerShown: false }}/>
-    <Stack.Screen name="BottomTab" component={BottomTab} options={{ headerShown: false }} />
+    <Stack.Screen name="BottomTab" component={BottomTab} options={{headerShown:false}} />
     <Stack.Screen name="MeuPerfil" component={MeuPerfil} options={{ headerShown: false }} />
     <Stack.Screen name="OutrosPerfis" component={OutrosPerfis} options={{ headerShown: false }} />
     <Stack.Screen name="EscolherTemaDebate" component={EscolherTemaDebate} options={headerStyle('Escolher tema')} />

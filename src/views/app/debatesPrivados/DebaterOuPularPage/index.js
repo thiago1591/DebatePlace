@@ -42,8 +42,6 @@ const DebaterOuPularPage = () => {
     return (
       <SafeAreaView style={{ flex: 1 }}>
 
-        <Header title="Debates Privados" />
-
         <Swiper
           cards={usuarios}
           backgroundColor={'transparent'}

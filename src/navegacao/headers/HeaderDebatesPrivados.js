@@ -1,23 +1,20 @@
 import React from 'react';
+import {View} from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native'
-import TopNavigation from './TopNavigationHome'
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {StyleSheet,TouchableOpacity,Image } from 'react-native'
+import DebatesPrivados from '../../views/app/debatesPrivados/DebaterOuPularPage'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import Header from '../../components/HeaderTeste'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const Stack = createStackNavigator()
 
-
-//Essa Stack é responsavel apenas por incluir um estilo de header acima do header do TopNavigation, na pagina Home
 export default props => {
     return <Stack.Navigator
-        initialRouteName="TopNavigation"
+        initialRouteName="DebatesPrivados"
         screenOptions={{
             headerStyle: {
                 backgroundColor: '#7c99e2',
-                shadowOpacity:0,
-                elevation:0
             },
             headerTitleStyle: {
                 fontSize: 15
@@ -26,12 +23,15 @@ export default props => {
         <Stack.Screen options={{
             title: "",
             headerLeft: () => (
-                <Header  title="Debates Ativos" page="home" />
+                <Header  title="Debates Privados" page="home" />
             ),
-            headerRight: () => { return <Ionicons style={{marginRight:10}} name="settings-outline" size={25} color="white" /> }
+            headerRight: () => { return <View style={{marginRight:10,flexDirection:'row'}}>
+            <Icon name="notifications" color="white" size={28} />
+            <Icon style={{marginLeft:15}} name="filter-alt" color="white" size={28} />
+          </View> }
         }}
-            name="TopNavigation"
-            component={TopNavigation} />
+            name="Debates Privados "
+            component={DebatesPrivados} />
     </Stack.Navigator>;
 }
 

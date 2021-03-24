@@ -102,10 +102,10 @@ class Swiper extends Component {
       height - cardVerticalMargin * 2 - marginTop - marginBottom
 
     return {
-      top: hp('7.4%'),
+      top: 5,
       left: cardHorizontalMargin,
       width: cardWidth,
-      height: '83.5%'
+      height: '90%'
     }
   }
 

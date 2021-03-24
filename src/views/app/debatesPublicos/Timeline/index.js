@@ -14,7 +14,7 @@ const Timeline = () => {
       async function getData() {
         await api.get('debates_publicos').then(response => {
           setDebates(response.data)
-        })
+        }).catch(error => console.log(error));
       }
       getData()
     })
@@ -23,7 +23,6 @@ const Timeline = () => {
 
   return (<>
     <ScrollView>
-      <Header title="Debates Públicos" />
       <Container>
         {debates.map((debate,key) => {
           return (

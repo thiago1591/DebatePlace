@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
-import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native'
-import TopNavigation from './TopNavigationHome'
+import {StyleSheet,TouchableOpacity,Image } from 'react-native'
+import TopNavigation from '../Home/TopNavigationHome'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import Header from '../../components/HeaderTeste'
