@@ -4,7 +4,7 @@ import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
 
 
 export default props => {
-  return <View style={{ padding: 15,flex:1 }}>
+  return <View style={{ padding: 15,flex:1,backgroundColor:'white' }}>
 
     <View style={{ alignItems: 'center' }}>
       <Text style={styles.txtTitulo}>Questão 4 de 30</Text>
@@ -12,7 +12,7 @@ export default props => {
     </View>
 
     <View style={{flex:5,justifyContent:'center'}}>
-      <Text style={styles.txtQuestao}>De uma forma geral, o salário mínimo causa mais mal do que bem.
+      <Text style={styles.txtQuestao}>
 O governo deveria definir um limite para o salário dos banqueiros e CEOs.</Text>
     </View>
 

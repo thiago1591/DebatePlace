@@ -6,7 +6,6 @@ import InteressesList from '../../../../../components/InteressesList'
 import { UserImageContainer, UserImage, TxtName, VisaoContainer, Border, TxtOpnion, InteressesContainer, TxtTopic, CoordenadasImage } from './styles';
 
 const Cardcomponent = ({ user }) => {
-    useEffect(()=>{console.log(user)},[])
   return (
       <Card style={{ paddingHorizontal: 20, flex: 1 }}>
         

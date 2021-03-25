@@ -4,8 +4,6 @@ import UserAvatar from "@muhzi/react-native-user-avatar";
 import { Card } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder'
-import adjust from '../../adjust'
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default ({ debate }) => {
     const [isLoad, setIsLoad] = useState(false)
@@ -14,10 +12,11 @@ export default ({ debate }) => {
         if (Object.keys(debate).length !== 0) {
             setIsLoad(true)
         }
+        console.log(debate)
     }, [debate])
 
     return (
-        <Card style={{ padding: 10, marginBottom: 10 }}>
+        <Card style={{paddingLeft: 6, paddingRight: 6, marginBottom: 8 }}>
             <View style={styles.userInfo}>
 
                 <ShimmerPlaceHolder
@@ -26,17 +25,9 @@ export default ({ debate }) => {
                     autoRun={true}
                     visible={isLoad}>
                     <UserAvatar userName="John Samuel" size={40} backgroundColor="#0be881"
-                        src="https://s.france24.com/media/display/b92cfa72-e8c3-11ea-bcb5-005056bff430/w:1280/p:16x9/2020-08-27T181728Z_711309918_RC2IMI9O4SSL_RTRMADP_3_USA-ELECTION-BIDEN.webp"
+                        src={debate.imagem}
                     />
                 </ShimmerPlaceHolder>
-
-                {/* <ShimmerPlaceHolder
-                    shimmerColors={['transparent', 'transparent', 'transparent']}
-                    LinearGradient={LinearGradient}
-                    autoRun={true}
-                    visible={isLoad}>
-                    <Text style={styles.time}>Ontem</Text>
-                </ShimmerPlaceHolder> */}
 
                 <ShimmerPlaceHolder
                     shimmerStyle={styles.titleLoading}

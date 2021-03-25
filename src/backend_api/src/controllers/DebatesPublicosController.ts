@@ -14,11 +14,10 @@ export default {
             FROM "Debate_Publico" d 
             LEFT JOIN "Usuario" u ON d.autor_id = u.id`)
         for (let i=0;i<debatesPublicos.length;i++){
-
+            debatesPublicos[i].imagem_user = `http://192.168.0.15:3333/uploads/${debatesPublicos[i].imagem_user}`
              const respostasLength = await respostasRepository.query(`SELECT id_debate FROM "Resposta" WHERE id_debate = ${debatesPublicos[i].id_debate}`)
-            if(respostasLength.length === 0){
-                
-            } else{
+
+            if(respostasLength.length != 0){
 
             const respostas = await respostasRepository.query(`
             SELECT u.id as id_user_resposta ,u.nome as nome_user_resposta,u.imagem as imagem_user_resposta, r.mensagem as mensagem_resposta 
@@ -31,7 +30,7 @@ export default {
             respostasArray.push(resposta)
             debatesPublicos[i].id_user_resposta = respostasArray[i].id_user_resposta
             debatesPublicos[i].nome_user_resposta = respostasArray[i].nome_user_resposta
-            debatesPublicos[i].imagem_user_resposta = respostasArray[i].imagem_user_resposta
+            debatesPublicos[i].imagem_user_resposta = `http://192.168.0.15:3333/uploads/${respostasArray[i].imagem_user_resposta}` 
             debatesPublicos[i].mensagem_resposta = respostasArray[i].mensagem_resposta
             }
         }

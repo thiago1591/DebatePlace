@@ -26,7 +26,7 @@ const MeuPerfil = () => {
                             backgroundColor="#0be881"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/672px-Aristotle_Altemps_Inv8575.jpg"
                         />
-                        <TxtName>Thiago André</TxtName>
+                        <TxtName>Aristóteles</TxtName>
                     </View>
                 </UserImageContainer>
             </Capa>

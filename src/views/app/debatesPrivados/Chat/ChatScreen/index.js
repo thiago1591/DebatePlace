@@ -35,7 +35,7 @@ const Teste = () => {
                 <TxtContainer>
                     <UserName>Thiago</UserName>
                     <TxtMessage>
-                        Opa mano fala ai. Curti o tema
+                    Lorem Ipsum is simply dummy text of 
                     </TxtMessage>
                 </TxtContainer>
 

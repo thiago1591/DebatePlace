@@ -5,7 +5,7 @@ export default {
         return {   
                 id: usuario.id,
                 nome: usuario.nome,
-                imagem:`http://192.168.42.89:3333/uploads/${usuario.imagem}`,
+                imagem:`http://192.168.0.15:3333/uploads/${usuario.imagem}`,
                 capa: usuario.capa,
                 texto_resumitivo: usuario.texto_resumitivo,
                 temas_interesse: usuario.temas_interesse,

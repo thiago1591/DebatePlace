@@ -33,6 +33,11 @@ export default {
         JOIN "Usuario" u
         ON dp.autor_id = u.id
         WHERE ds.id_usuario = ${id}`)
+
+        debatesSeguidos.map((debate: { imagem: string })=>{
+            debate.imagem = `http://192.168.0.15:3333/uploads/${debate.imagem}`
+        })
+        
         return res.json(debatesSeguidos)
     }
 }
