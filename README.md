@@ -1,6 +1,6 @@
 # DebatePlace
 
-![Preview-Screens](https://github.com/thiago1590/DebatePlace/tree/master/assets/preview.png)
+![Preview-Screens](assets/preview.png)
 
 ## Sobre o projeto
 
