@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "644040292168",
+    "project_id": "debateplace-8824b",
+    "storage_bucket": "debateplace-8824b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644040292168:android:206efbf95e011951bb657d",
+        "android_client_info": {
+          "package_name": "com.debateplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644040292168-lnqb9b9jgme6vvstctfnabfqud6a7272.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.debateplace",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "644040292168-co04q48ci2tbnf78cqcf53on2bjv01n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6OWqHbLyeTfUwe9UR-sb-eNKHFkyId_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644040292168-co04q48ci2tbnf78cqcf53on2bjv01n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

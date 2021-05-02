@@ -55,7 +55,7 @@ const EditProfileHeaderStyle = {
 }
 
 export default props => {
-  return <Stack.Navigator initialRouteName="PaginaTeste" screenOptions={{
+  return <Stack.Navigator initialRouteName="BottomTab" screenOptions={{
     headerStyle: {
         backgroundColor: '#7c99e2',
         shadowOpacity:0,
