@@ -63,7 +63,7 @@ export default props => {
     },
     headerTitleStyle: {
         fontSize: 15
-    } }}>
+    } }}>  
     <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
     <Stack.Screen name="EditarPerfil" component={EditarPerfil} options={{ headerShown: false }} />
     <Stack.Screen name="EscolherInteresses" component={EscolherInteresses} options={{ headerShown: false }}/>

@@ -1,8 +1,10 @@
 import React, { useState} from 'react';
-import { View, Text, StyleSheet, ScrollView} from 'react-native';
+import { View,ScrollView} from 'react-native';
+
 import ComponenteDebate from './components';
+
 import { useNavigation,useFocusEffect } from '@react-navigation/native';
-import Header from '../../../../components/Header'
+
 import { Container, BtnAdd, TxtBtn } from './styles';
 
 import api from '../../../../services/api'

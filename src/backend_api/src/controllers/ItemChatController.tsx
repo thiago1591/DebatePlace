@@ -10,10 +10,3 @@ export default {
         }
     }
 }
-
-// MVC
-// models
-// views
-// controllers
-
-// index,show,remove,edit

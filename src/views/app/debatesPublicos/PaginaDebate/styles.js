@@ -8,20 +8,20 @@ export const CardComponent = styled(Card)`
     margin-bottom:10px;
     padding:10px;
 `
-export const Responder = styled.TouchableOpacity`
+export const Answer = styled.TouchableOpacity`
     border-width:1.2px;
-  border-color: #d3e2e6;
-  height:56px;
-  padding: 18px 24px;
-  margin:5px 0;
-  background-color:white
+    border-color: #d3e2e6;
+    height:56px;
+    padding: 18px 24px;
+    margin:5px 0;
+    background-color:white
 `
 
-export const TxtResponder = styled.Text`
+export const AnswerTxt = styled.Text`
     color:gray;
     font-size:14px;
 `
-export const TxtTopic = styled.Text`
+export const TopicTxt = styled.Text`
     margin:5px 0 10px 15px;
     font-size:16px;
 `

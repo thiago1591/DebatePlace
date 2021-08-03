@@ -1,10 +1,29 @@
 import React, { useState } from 'react';
 import { ScrollView, TouchableOpacity} from 'react-native';
-import { Container, Header, TxtHeader, Label, Input, TxtButton, Capa, UserImage, VisaoContainer, BtnExemplos, TxtBtnInteresses, InteresseContainer, CoordenadasImage, ButtonsContainer, Button} from './styles';
-import Feather from 'react-native-vector-icons/dist/Feather';
-import InteressesList from '../../../components/InteressesList'
+
 import BtnPerfil from '../../../components/BtnPerfil'
+
+import Feather from 'react-native-vector-icons/dist/Feather';
+
 import { useNavigation } from '@react-navigation/native';
+
+import { 
+    Container, 
+    Header, 
+    TxtHeader, 
+    Label, 
+    Input, 
+    TxtButton, 
+    Capa, 
+    UserImage, 
+    VisaoContainer, 
+    BtnExemplos, 
+    TxtBtnInteresses, 
+    InteresseContainer, 
+    CoordenadasImage, 
+    ButtonsContainer, 
+    Button
+    } from './styles';
 
 const AddDebateTxt = () => {
     const navigation = useNavigation();
@@ -15,6 +34,7 @@ const AddDebateTxt = () => {
             <TxtHeader>Avançar</TxtHeader>
             </TouchableOpacity>
         </Header>
+
         <Container>
             <ScrollView showsVerticalScrollIndicator={false}>
 
@@ -42,7 +62,7 @@ const AddDebateTxt = () => {
                         <TxtButton>Escolher </TxtButton>
                     </Button>
                 </InteresseContainer>
-
+                
                 <Label>Coordenadas Políticas (opcional)</Label>
                 <CoordenadasImage resizeMode="contain" source={require('../../../../assets/coordenadas.jpg')} />
                 <ButtonsContainer>

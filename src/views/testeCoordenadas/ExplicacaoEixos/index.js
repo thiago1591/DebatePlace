@@ -1,6 +1,16 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Container, Title, TxtTopics, EixosContainer, Text, Button, TxtButton, ButtonContainer, ScrollView } from './styles';
+import { 
+    Container, 
+    Title, 
+    TxtTopics, 
+    EixosContainer, 
+    Text, 
+    Button, 
+    TxtButton, 
+    ButtonContainer, 
+    ScrollView 
+    } from './styles';
 
 const ExplicacaoEixos = () => {
     const navigation = useNavigation();

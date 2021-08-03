@@ -10,17 +10,23 @@ export default {
         const respostasArray = []
         const debatesPublicos = await 
         debatePublicoRepository.query(`
-            SELECT u.id as id_user,u.imagem as imagem_user,u.nome as nome_user,d.id as id_debate,d.titulo as titulo_debate,d.mensagem as mensagem_debate 
+            SELECT u.id as id_user,u.imagem as imagem_user,u.nome as nome_user,
+            d.id as id_debate,d.titulo as titulo_debate,d.mensagem as mensagem_debate 
             FROM "Debate_Publico" d 
-            LEFT JOIN "Usuario" u ON d.autor_id = u.id`)
+            LEFT JOIN "Usuario" u 
+            ON d.autor_id = u.id`)
+
         for (let i=0;i<debatesPublicos.length;i++){
-            debatesPublicos[i].imagem_user = `http://192.168.0.15:3333/uploads/${debatesPublicos[i].imagem_user}`
-             const respostasLength = await respostasRepository.query(`SELECT id_debate FROM "Resposta" WHERE id_debate = ${debatesPublicos[i].id_debate}`)
+            debatesPublicos[i].imagem_user = 
+            `http://192.168.0.15:3333/uploads/${debatesPublicos[i].imagem_user}`
+             const respostasLength = await respostasRepository.query(`
+             SELECT id_debate FROM "Resposta" WHERE id_debate = ${debatesPublicos[i].id_debate}`)
 
             if(respostasLength.length != 0){
 
             const respostas = await respostasRepository.query(`
-            SELECT u.id as id_user_resposta ,u.nome as nome_user_resposta,u.imagem as imagem_user_resposta, r.mensagem as mensagem_resposta 
+            SELECT u.id as id_user_resposta ,u.nome as nome_user_resposta,
+            u.imagem as imagem_user_resposta, r.mensagem as mensagem_resposta 
             FROM "Resposta" r 
             INNER JOIN "Usuario" u ON r.id_usuario = u.id 
             WHERE id_debate = ${debatesPublicos[i].id_debate} 

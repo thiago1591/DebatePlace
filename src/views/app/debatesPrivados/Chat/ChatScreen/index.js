@@ -1,11 +1,24 @@
 import React,{useEffect} from 'react'
 import { View, Text, ScrollView, } from 'react-native'
 import UserAvatar from "@muhzi/react-native-user-avatar"
-import { Container, UserName, MessageContainer, TxtMessage, TxtContainer, MessageContainer2, UserName2, TxtContainer2, TxtMessage2,SendMessageContainer,InputContainer,SendButton,Input } from './styles'
+import { 
+    Container, 
+    UserName, 
+    MessageContainer, 
+    TxtMessage, 
+    TxtContainer, 
+    MessageContainer2,
+    TxtContainer2, 
+    TxtMessage2,
+    SendMessageContainer,
+    InputContainer,
+    SendButton,
+    Input 
+    } from './styles'
+
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import IO from 'socket.io-client'
 import api from '../../../../../services/api'
-
 
 
 const Teste = () => {

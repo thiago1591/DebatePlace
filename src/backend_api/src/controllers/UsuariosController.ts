@@ -38,12 +38,14 @@ export default {
             console.log('erro: --> ', err.message)
         }
     },
+
     async show(req:Request,res:Response){
         const {id} = req.params
         const usuarioRepository = getRepository(Usuario)
         const usuario = await usuarioRepository.findOneOrFail(id)
         return res.json(usuarioView.render(usuario))
     },
+    
     async index(req:Request,res:Response){
         const usuarioRepository = getRepository(Usuario)
         const usuarios = await usuarioRepository.find()

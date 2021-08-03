@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
-
-
+import { 
+  View, 
+  Text, 
+  StyleSheet,
+  TouchableOpacity} from 'react-native';
 
 export default props => {
   return <View style={{ padding: 15,flex:1,backgroundColor:'white' }}>

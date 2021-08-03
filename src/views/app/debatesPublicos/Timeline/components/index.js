@@ -1,15 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from 'react-native-paper';
+
 import LinhaRespostas from '../../../../../components/LinhaRespostas'
-import { Container, ActionContainer, Button, TxtButton, InfosContainer, InfoContainer, TextInfo } from './styles';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import OpniaoAutor from '../../../../../components/DebatesPublicos/opniaoAutor'
 import Respostas from '../../../../../components/DebatesPublicos/resposta'
-import { useNavigation } from '@react-navigation/native';
+
+import EvilIcon from 'react-native-vector-icons/EvilIcons';
+import IonIcon from 'react-native-vector-icons/Ionicons';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+
 import LinearGradient from 'react-native-linear-gradient';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder'
+
+import { useNavigation } from '@react-navigation/native';
+
+import { 
+  Container, 
+  ActionContainer, 
+  Button, 
+  TxtButton, 
+  InfosContainer, 
+  InfoContainer, 
+  TextInfo 
+  } from './styles';
 
 const DebatesTimeline = ({debate}) => {
   const [isLoad, setIsLoad] = useState(false)
@@ -38,23 +51,23 @@ const DebatesTimeline = ({debate}) => {
 
         <InfosContainer>
           <InfoContainer>
-            <FontAwesome style={{ marginTop: 2 }} name="flag" size={17} color="green" />
+            <FontAwesomeIcon style={{ marginTop: 2 }} name="flag" size={17} color="green" />
             <TextInfo>10</TextInfo>
           </InfoContainer>
 
           <InfoContainer>
-            <EvilIcons name="comment" size={23} color="gray" />
+            <EvilIcon name="comment" size={23} color="gray" />
             <TextInfo>10</TextInfo>
           </InfoContainer>
         </InfosContainer>
 
         <ActionContainer>
           <Button>
-            <Ionicons style={{ marginTop: 2 }} name="md-flag" size={17} color="green" />
+            <IonIcon style={{ marginTop: 2 }} name="md-flag" size={17} color="green" />
             <TxtButton margin={4}>Seguir Debate</TxtButton>
           </Button>
           <Button>
-            <EvilIcons name="comment" size={25} color="gray" />
+            <EvilIcon name="comment" size={25} color="gray" />
             <TxtButton margin={2}>Responder</TxtButton>
           </Button>
 

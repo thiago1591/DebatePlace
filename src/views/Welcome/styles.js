@@ -7,6 +7,10 @@ export const Container = styled.ImageBackground`
     height:100%;
 `;
 
+export const Header = styled.View`
+    flex:10;
+`
+
 export const Title = styled.Text`
     text-align:center;
     font-size:55px;
@@ -38,7 +42,7 @@ export const Button = styled.TouchableOpacity`
     align-items:center
 `
 
-export const TxtButton = styled.Text`
+export const ButtonTxt = styled.Text`
 font-weight:bold;
 font-size:${`${hp('2%')}px`};
 color:#2d6dc2;
@@ -50,3 +54,9 @@ export const Icon = styled.Image`
     height:${`${hp('3%')}px`};
 `
 
+export const AlreadyHaveAccountTxt = styled.Text`
+    color: white;
+    align-self: center;
+    font-size: 16;
+    margin-top: 5;
+`
